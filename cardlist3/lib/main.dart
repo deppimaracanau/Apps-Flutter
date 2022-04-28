@@ -1,6 +1,3 @@
-import 'dart:js';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/link.dart';
 
@@ -169,16 +166,34 @@ class Estagio extends StatelessWidget {
         padding: const EdgeInsets.only(left: 20.0),
         child: Row(
           children: <Widget>[
-            Link(
-            target: LinkTarget.self,
-            uri: Uri.parse('\n${data['link']}'),
-            builder: (BuildContext context, followLink) => (
-            Text ('Download'),
-            onPressed(){},
-            ),
+          Link(
+            //target: LinkTarget.self,
+            uri: Uri.parse('${data['link']}'),
+            builder: (context,followLink) {
+              return ElevatedButton(
+                child: RichText(
+                  textAlign: TextAlign.left,
+
+                      text: TextSpan(
+                        text: '\nDownload',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontStyle: FontStyle.italic,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      ),
 
 
-        )
+                ),
+                onPressed: followLink,
+            );
+            },
+          )
+
+
+
+
+
 
 
             // TextButton(
@@ -186,26 +201,7 @@ class Estagio extends StatelessWidget {
             //     textStyle: const TextStyle(fontSize: 20),
             //   ),
             //   onPressed: () {},
-            //   child: RichText(
-            //     textAlign: TextAlign.left,
-            //     text: TextSpan(
-            //       text: '\n${data['link']}',
-            //       // style: const TextStyle(
-            //       //   color: Colors.grey,
-            //       //   fontSize: 35,
-            //       // ),
-            //       children: const <TextSpan>[
-            //         TextSpan(
-            //           text: '\nDownload',
-            //           style: TextStyle(
-            //               color: Colors.grey,
-            //               fontStyle: FontStyle.italic,
-            //               fontSize: 20,
-            //               fontWeight: FontWeight.bold),
-            //         ),
-            //       ],
-            //     ),
-            //   ),
+            //
             // ),
           ],
         ),

@@ -5,144 +5,144 @@ class ListDados {
     //================ fase01
     {
       'name': 'assets/megaman2.gif',
-      'iconColor': Colors.orange,
+      
       'titulo': 'Início de estágio',
       'subtitulo': 'Cadastro de empresas',
       'changeColor': Colors.green,
-      'link': 'https://is.gd/orlnT9',
+      'link': 'https://ifce.edu.br/maracanau/menu/setor-de-estagios/subs-aquirvos-10_06/cadastro-de-empresas-1.doc',
     },
     {
       'name': 'assets/mario2.gif',
-      'iconColor': Colors.orange,
+      
       'titulo': 'Início de estágio',
       'subtitulo': 'Ficha de Matrícula',
       'changeColor': Colors.green,
-      'link': 'https://is.gd/f5GfAF'
+      'link': 'https://ifce.edu.br/maracanau/menu/setor-de-estagios/subs-aquirvos-10_06/ficha-de-matricula.doc'
     },
     {
-      'name': 'assets/pokebola2.gif',
-      'iconColor': Colors.orange,
+      'name': 'assets/pokebola.gif',
+      
       'titulo': 'Início de estágio',
       'subtitulo': 'Termo de compromisso\nde estágio e\nplano de atividades',
       'changeColor': Colors.green,
-      'link': 'https://is.gd/8aOyzq'
+      'link': 'https://ifce.edu.br/maracanau/menu/setor-de-estagios/termo-de-compromisso-de-estagio-e-plano-de-atividades-3-1.docx'
     },
 
     //================ fase02
 
     {
       'name': 'assets/thor2.gif',
-      'iconColor': Colors.orange,
+      
       'titulo': 'Fase intermediária',
       'subtitulo': 'Relatório diário de estágio',
       'changeColor': Colors.green,
-      'link': 'https://is.gd/pT8bt4'
+      'link': 'https://ifce.edu.br/maracanau/menu/setor-de-estagios/subs-aquirvos-10_06/relatorio-diario-de-atividades-2.doc'
     },
     {
       'name': 'assets/mario.gif',
-      'iconColor': Colors.orange,
+      
       'titulo': 'Fase intermediária',
       'subtitulo': 'Termo de compromisso\nde estágio e plano\nde atividades',
       'changeColor': Colors.green,
-      'link': 'https://is.gd/omJGaG'
+      'link': 'https://ifce.edu.br/maracanau/menu/setor-de-estagios/termo-de-compromisso-de-estagio-e-plano-de-atividades-3-1.docx'
     },
     {
       'name': 'assets/ryu.gif',
-      'iconColor': Colors.orange,
+      
       'titulo': 'Fase intermediária',
       'subtitulo': 'Relatório periódico de estágio',
       'changeColor': Colors.green,
-      'link': 'https://is.gd/7ADUOK'
+      'link': 'https://ifce.edu.br/maracanau/menu/setor-de-estagios/subs-aquirvos-10_06/relatorio-periodico-de-estagio.doc'
     },
     {
       'name': 'assets/storm.gif',
-      'iconColor': Colors.orange,
+      
       'titulo': 'Fase intermediária',
       'subtitulo': 'Termo aditivo de horas',
       'changeColor': Colors.green,
-      'link': 'https://is.gd/2cMeKo'
+      'link': 'https://ifce.edu.br/maracanau/menu/setor-de-estagios/subst-de-arquivos-30.05/termo-aditivo-de-alteracao-de-horario.odt'
     },
     //=======================fase03
     {
       'name': 'assets/metroid.gif',
-      'iconColor': Colors.orange,
+      
       'titulo': 'Conclusão de estágio\ncursos técnicos',
       'subtitulo': 'Ficha de avaliação\ndo estagiário',
       'changeColor': Colors.green,
-      'link': 'https://is.gd/gpFiI8'
+      'link': 'https://ifce.edu.br/maracanau/menu/setor-de-estagios/subst-de-arquivos-30.05/ficha-de-avaliacao-do-estagiario_04_06_19.odt'
     },
     {
       'name': 'assets/venom.gif',
-      'iconColor': Colors.orange,
+      
       'titulo': 'Conclusão de estágio\ncursos técnicos',
       'subtitulo': 'Relatório Final de Estágio',
       'changeColor': Colors.green,
-      'link': 'https://is.gd/cLWboe'
+      'link': 'https://ifce.edu.br/maracanau/menu/setor-de-estagios/subst-de-arquivos-30.05/relatorio-final-de-estagio-dos-cursos-tecnicos.odt'
     },
     {
       'name': 'assets/darth.gif',
-      'iconColor': Colors.orange,
+      
       'titulo': 'Conclusão de estágio\ncursos técnicos',
       'subtitulo': 'Requerimento de conclusão\nde  Estágio',
       'changeColor': Colors.green,
-      'link': 'https://is.gd/eND3QZ'
+      'link': 'https://ifce.edu.br/maracanau/menu/setor-de-estagios/subs-aquirvos-10_06/requerimento-de-conclusao-da-disciplina-de-estagio-obrigatorio.doc'
     },
     {
       'name': 'assets/ashoka.gif',
-      'iconColor': Colors.orange,
+      
       'titulo': 'Conclusão de estágio\ncursos técnicos',
       'subtitulo': 'Declaração de conclusão\nde Estágio',
       'changeColor': Colors.green,
-      'link': 'https://is.gd/PsmzI4'
+      'link': 'https://ifce.edu.br/maracanau/menu/setor-de-estagios/subs-aquirvos-10_06/declaracao-de-conclusao-de-estagio-13.doc'
     },
     {
       'name': 'assets/tale2.gif',
-      'iconColor': Colors.orange,
+      
       'titulo': 'Conclusão de estágio\ncursos técnicos',
       'subtitulo': 'Termo de rescisão de\ncontrato de Estágio',
       'changeColor': Colors.green,
-      'link': 'https://is.gd/m66Pm3'
+      'link': 'https://ifce.edu.br/maracanau/menu/setor-de-estagios/arquivo10_07/termo-de-rescisao-de-contrato-de-estagio.doc'
     },
     //==================
     {
       'name': 'assets/jedi.gif',
-      'iconColor': Colors.orange,
+      
       'titulo': 'Conclusão de estágio\ncursos superiores',
       'subtitulo': 'Ficha de avaliação\ndo estagiário',
       'changeColor': Colors.green,
-      'link': 'https://is.gd/pSACC5'
+      'link': 'https://ifce.edu.br/maracanau/menu/setor-de-estagios/subs-aquirvos-10_06/ficha-de-avaliacao-do-estagiario.doc'
     },
     {
       'name': 'assets/morty.gif',
-      'iconColor': Colors.orange,
+      
       'titulo': 'Conclusão de estágio\ncursos superiores',
       'subtitulo': 'Requerimento de Conclusão\ndo Estágio',
       'changeColor': Colors.green,
-      'link': 'https://is.gd/eND3QZ'
+      'link': 'https://ifce.edu.br/maracanau/menu/setor-de-estagios/subs-aquirvos-10_06/requerimento-de-conclusao-da-disciplina-de-estagio-obrigatorio.doc'
     },
     {
       'name': 'assets/spiderman.gif',
-      'iconColor': Colors.orange,
+      
       'titulo': 'Conclusão de estágio\ncursos superiores',
       'subtitulo': 'Orientação para\nRelatório Final de Estágio',
       'changeColor': Colors.green,
-      'link': 'https://is.gd/t8LZyV'
+      'link': 'https://ifce.edu.br/maracanau/menu/setor-de-estagios/subs-aquirvos-10_06/orientacao-para-relatorio-para-relatorio-final-de-estagios-dos-cursos-superiores-13.do'
     },
     {
       'name': 'assets/sonic2.gif',
-      'iconColor': Colors.orange,
+      
       'titulo': 'Conclusão de estágio\ncursos superiores',
       'subtitulo': 'Declaração de conclusão\nde Estágio',
       'changeColor': Colors.green,
-      'link': 'https://is.gd/PsmzI4'
+      'link': 'https://ifce.edu.br/maracanau/menu/setor-de-estagios/subs-aquirvos-10_06/declaracao-de-conclusao-de-estagio-13.doc'
     },
     {
       'name': 'assets/goku.gif',
-      'iconColor': Colors.orange,
+      
       'titulo': 'Conclusão de estágio\ncursos superiores',
       'subtitulo': 'Termo de compromisso\nde estágio e plano\nde atividades',
       'changeColor': Colors.green,
-      'link': 'https://is.gd/m66Pm3'
+      'link': 'https://ifce.edu.br/maracanau/menu/setor-de-estagios/arquivo10_07/termo-de-rescisao-de-contrato-de-estagio.doc'
     },
   ];
 }
