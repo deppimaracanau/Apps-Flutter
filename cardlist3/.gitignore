@@ -32,7 +32,7 @@
 /build/
 
 # Web related
-../cardlist3/lib/generated_plugin_registrant.dart
+lib/generated_plugin_registrant.dart
 
 # Symbolication related
 app.*.symbols

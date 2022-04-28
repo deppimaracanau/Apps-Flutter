@@ -31,13 +31,23 @@ dependencies:
     sdk: flutter
 
 
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  url_launcher: ^6.1.0
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+
+flutter_native_splash:
+  image: assets/logoifce.png
+  color: "#ffffff"
+  android: true
+  ios: true
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -51,6 +61,51 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+  assets:
+    - assets/flor.jpg
+    - assets/backtofuture.jpg
+    - assets/cogumelo.png
+    - assets/darthvander.jpg
+    - assets/backtofuture.jpg
+    - assets/ghost.png
+    - assets/goku.jpg
+    - assets/knight.jpg
+    - assets/mago.jpg
+    - assets/metroid.jpg
+    - assets/metroid2.jpg
+    - assets/ovodoyochi.png
+    - assets/pokebola.png
+    - assets/rick.jpg
+    - assets/yoda2.jpg
+    - assets/zelda.png
+    - assets/zero.jpg
+    - assets/iron.png
+    - assets/liza.png
+    - assets/mew.png
+    - assets/morty.gif
+    - assets/pikachu.png
+    - assets/strange.jpg
+    - assets/sonic.png
+    - assets/pikachu.png
+    - assets/metroid.gif
+    - assets/ashoka.gif
+    - assets/megaman2.gif
+    - assets/darth.gif
+    - assets/goku.gif
+    - assets/jedi.gif
+    - assets/mario.gif
+    - assets/rogue.gif
+    - assets/tale2.gif
+    - assets/thor2.gif
+    - assets/venom.gif
+    - assets/zero2.gif
+    - assets/storm.gif
+    - assets/spiderman.gif
+    - assets/sonic2.gif
+    - assets/mario2.gif
+    - assets/ryu.gif
+    - assets/tale2.gif
+    - assets/pokebola.gif
 
 
   # The following line ensures that the Material Icons font is
@@ -88,9 +143,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-assets:
-  - assets/backtofuture.jpg
-  - assets/cogumelo.png
-  - assets/heathjoker.jpg
-  - assets/mario.jpg
-  - assets/flor.jpg
+

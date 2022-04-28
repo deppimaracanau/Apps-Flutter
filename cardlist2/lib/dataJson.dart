@@ -13,7 +13,7 @@ class Link {
       'link': '\$12.279',
     },
     {
-      'name': 'Ethereum',
+      'name': 'assets/flor.jpg',
       'symbol': 'ETH',
       'icon': Icons.currency_bitcoin_outlined,
       'iconColor': Colors.black,
@@ -23,7 +23,7 @@ class Link {
       'link': '\$7.809'
     },
     {
-      'name': 'Lite coin',
+      'name': 'assets/flor.jpg',
       'symbol': 'Lt',
       'icon': Icons.currency_bitcoin_outlined,
       'iconColor': Colors.blue,
@@ -33,7 +33,7 @@ class Link {
       'link': '\$7.809'
     },
     {
-      'name': 'Dash',
+      'name': 'assets/flor.jpg',
       'symbol': 'Dh',
       'icon': Icons.currency_bitcoin_outlined,
       'iconColor': Colors.purpleAccent,
