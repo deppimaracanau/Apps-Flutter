@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/link.dart';
-
 import 'dataJson.dart';
 
 void main() {
@@ -54,20 +53,12 @@ class Estagio extends StatelessWidget {
                                       children: <Widget>[
                                         Row(
                                           children: <Widget>[
-                                            // allIcon(link[index]),
-                                            // const Spacer(
-                                            //     //height: 10,
-                                            //     ),
                                             avatar(link[index]),
                                             const Spacer(),
                                             nameChange(link[index]),
                                             const Spacer(
                                                 //width: 10,
                                                 ),
-                                            // changeIcon(link[index]),
-                                            // const Spacer(
-                                            //     // width: 20,
-                                            //     )
                                           ],
                                         ),
                                         Row(
@@ -94,20 +85,6 @@ class Estagio extends StatelessWidget {
       ),
     );
   }
-
-  // Widget allIcon(data) {
-  //   return Padding(
-  //     padding: const EdgeInsets.only(left: 15.0),
-  //     child: Align(
-  //       alignment: Alignment.centerLeft,
-  //       child: Icon(
-  //         data['icon'],
-  //         color: data['iconColor'],
-  //         size: 40,
-  //       ),
-  //     ),
-  //   );
-  // }
 
   Widget avatar(data) {
     return Align(
@@ -166,43 +143,27 @@ class Estagio extends StatelessWidget {
         padding: const EdgeInsets.only(left: 20.0),
         child: Row(
           children: <Widget>[
-          Link(
-            //target: LinkTarget.self,
-            uri: Uri.parse('${data['link']}'),
-            builder: (context,followLink) {
-              return ElevatedButton(
-                child: RichText(
-                  textAlign: TextAlign.left,
-
-                      text: TextSpan(
-                        text: '\nDownload',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontStyle: FontStyle.italic,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold),
+            Link(
+              target: LinkTarget.self,
+              uri: Uri.parse('${data['link']}'),
+              builder: (context, followLink) {
+                return GestureDetector(
+                  child: RichText(
+                    //textAlign: TextAlign.left,
+                    text: TextSpan(
+                      text: '\nDownload do documento',
+                      style: TextStyle(
+                        color: Colors.blueGrey,
+                        fontStyle: FontStyle.italic,
+                        fontSize: 20,
+                        //fontWeight: FontWeight.bold
                       ),
-
-
-                ),
-                onPressed: followLink,
-            );
-            },
-          )
-
-
-
-
-
-
-
-            // TextButton(
-            //   style: TextButton.styleFrom(
-            //     textStyle: const TextStyle(fontSize: 20),
-            //   ),
-            //   onPressed: () {},
-            //
-            // ),
+                    ),
+                  ),
+                  onTap: followLink,
+                );
+              },
+            )
           ],
         ),
       ),
