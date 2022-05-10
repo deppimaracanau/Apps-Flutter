@@ -1,0 +1,115 @@
+-- Merging decision tree log ---
+application
+INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\main\AndroidManifest.xml:8:5-46:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\ac614c824e23a471f9baae03e650fa28\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\ac614c824e23a471f9baae03e650fa28\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.core:core:1.6.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\5d2119f1cc9ee89595058c05a72713d1\core-1.6.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.6.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\5d2119f1cc9ee89595058c05a72713d1\core-1.6.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\c8669cf80f4cb5a5cd49e37de0d29ccb\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\c8669cf80f4cb5a5cd49e37de0d29ccb\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.6.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\5d2119f1cc9ee89595058c05a72713d1\core-1.6.0\AndroidManifest.xml:24:18-86
+	android:name
+		INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\main\AndroidManifest.xml
+manifest
+ADDED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\main\AndroidManifest.xml:1:1-47:12
+INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\main\AndroidManifest.xml:1:1-47:12
+INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\main\AndroidManifest.xml:1:1-47:12
+INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\main\AndroidManifest.xml:1:1-47:12
+MERGED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\main\AndroidManifest.xml:1:1-47:12
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\5b04d9da507bc7565f4b9d9c20b1ef46\window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\ac614c824e23a471f9baae03e650fa28\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\f72e45398848a40f61634c3fb3ca152d\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\6db1d9f05dc500a30e675c875172e7da\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\8f03e570008e1b3363adc947c5b83d71\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\54f46afd8d578c838c0b7157395d854a\activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\c1f32d9b607a1f3f2eb16017f7928ef8\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.6.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\5d2119f1cc9ee89595058c05a72713d1\core-1.6.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\3a9e936e319d883c24b3bf80789433dc\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\5170901d8c02e6a3d60f63161ab18bb4\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\441f05b6be05797fb3369c1d3bc89c86\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\45eb138cddf7acf94e7a04e3596da1ec\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\94e582180593465f6f9df81ffc85f86d\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\a3c6ad76ae55d97bdade73ee16e232db\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\c8669cf80f4cb5a5cd49e37de0d29ccb\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\b5a55c341299e77866efed2549ddc169\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\75a0d998f332479ee482d15f90ee6518\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\main\AndroidManifest.xml:2:5-37
+		INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\debug\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\main\AndroidManifest.xml:1:1-47:12
+		INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\debug\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\main\AndroidManifest.xml:1:1-47:12
+		INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\debug\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\main\AndroidManifest.xml:1:11-69
+uses-sdk
+INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\main\AndroidManifest.xml
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\5b04d9da507bc7565f4b9d9c20b1ef46\window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\5b04d9da507bc7565f4b9d9c20b1ef46\window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\ac614c824e23a471f9baae03e650fa28\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\ac614c824e23a471f9baae03e650fa28\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\f72e45398848a40f61634c3fb3ca152d\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\f72e45398848a40f61634c3fb3ca152d\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\6db1d9f05dc500a30e675c875172e7da\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\6db1d9f05dc500a30e675c875172e7da\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\8f03e570008e1b3363adc947c5b83d71\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\8f03e570008e1b3363adc947c5b83d71\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\54f46afd8d578c838c0b7157395d854a\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\54f46afd8d578c838c0b7157395d854a\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\c1f32d9b607a1f3f2eb16017f7928ef8\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\c1f32d9b607a1f3f2eb16017f7928ef8\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.6.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\5d2119f1cc9ee89595058c05a72713d1\core-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.6.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\5d2119f1cc9ee89595058c05a72713d1\core-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\3a9e936e319d883c24b3bf80789433dc\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\3a9e936e319d883c24b3bf80789433dc\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\5170901d8c02e6a3d60f63161ab18bb4\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\5170901d8c02e6a3d60f63161ab18bb4\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\441f05b6be05797fb3369c1d3bc89c86\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\441f05b6be05797fb3369c1d3bc89c86\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\45eb138cddf7acf94e7a04e3596da1ec\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\45eb138cddf7acf94e7a04e3596da1ec\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\94e582180593465f6f9df81ffc85f86d\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\94e582180593465f6f9df81ffc85f86d\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\a3c6ad76ae55d97bdade73ee16e232db\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\a3c6ad76ae55d97bdade73ee16e232db\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\c8669cf80f4cb5a5cd49e37de0d29ccb\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\c8669cf80f4cb5a5cd49e37de0d29ccb\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\b5a55c341299e77866efed2549ddc169\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\b5a55c341299e77866efed2549ddc169\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\75a0d998f332479ee482d15f90ee6518\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\75a0d998f332479ee482d15f90ee6518\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\debug\AndroidManifest.xml
+INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\debug\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\debug\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\debug\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\debug\AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\debug\AndroidManifest.xml:6:22-64
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\ac614c824e23a471f9baae03e650fa28\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\ac614c824e23a471f9baae03e650fa28\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\ac614c824e23a471f9baae03e650fa28\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\ac614c824e23a471f9baae03e650fa28\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\ac614c824e23a471f9baae03e650fa28\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\deppi\.gradle\caches\transforms-2\files-2.1\ac614c824e23a471f9baae03e650fa28\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
