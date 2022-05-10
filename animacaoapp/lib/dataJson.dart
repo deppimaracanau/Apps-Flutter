@@ -126,7 +126,7 @@ class ListDados {
       'titulo': 'Conclusão de estágio\ncursos superiores',
       'subtitulo': 'Orientação para\nRelatório Final de Estágio',
       'changeColor': Colors.lightBlueAccent,
-      'link': 'https://ifce.edu.br/maracanau/menu/setor-de-estagios/subs-aquirvos-10_06/orientacao-para-relatorio-para-relatorio-final-de-estagios-dos-cursos-superiores-13.do'
+      'link': 'https://ifce.edu.br/maracanau/menu/setor-de-estagios/subs-aquirvos-10_06/orientacao-para-relatorio-para-relatorio-final-de-estagios-dos-cursos-superiores-13.doc'
     },
     {
       'name': 'assets/sonic2.gif',
