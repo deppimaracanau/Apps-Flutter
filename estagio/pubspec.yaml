@@ -53,6 +53,8 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
   assets:
+    - assets/rocket2.png
+    - assets/nuvens.png
     - assets/flor.jpg
     - assets/backtofuture.jpg
     - assets/cogumelo.png
