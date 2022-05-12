@@ -1,114 +1,122 @@
-import 'package:flutter/material.dart';
-import 'dart:io';
-import 'package:dio/dio.dart';
-import 'package:path_provider/path_provider.dart';
+import 'dart:isolate';
+import 'dart:ui';
 
-void main() {
-  runApp(DownloadFile());
+import 'package:flutter/material.dart';
+import 'package:flutter_downloader/flutter_downloader.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:permission_handler/permission_handler.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await FlutterDownloader.initialize(
+      debug: true // optional: set false to disable printing logs to console
+  );
+  runApp(MyApp());
 }
 
-class DownloadFile extends StatefulWidget {
-  const DownloadFile({Key? key}) : super(key: key);
-
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
-  State createState() {
-    return _DownloadFileState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
+    );
   }
 }
 
-class _DownloadFileState extends State {
-  var imageUrl =
-      "https://www.itl.cat/pngfile/big/10-100326_desktop-wallpaper-hd-full-screen-free-download-full.jpg";
-  bool downloading = true;
-  String downloadingStr = "No data";
-  String savePath = "";
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+
+  int progress = 0;
+
+
+  ReceivePort _receivePort = ReceivePort();
+
+  static downloadingCallback(id, status, progress) {
+    ///Looking up for a send port
+    SendPort sendPort = IsolateNameServer.lookupPortByName("downloading");
+
+    ///ssending the data
+    sendPort.send([id, status, progress]);
+  }
+
 
   @override
   void initState() {
+    // TODO: implement initState
     super.initState();
-    downloadFile();
-  }
 
-  Future downloadFile() async {
-    try {
-      Dio dio = Dio();
-
-      String fileName = imageUrl.substring(imageUrl.lastIndexOf("/") + 1);
-
-      savePath = await getFilePath(fileName);
-      await dio.download(imageUrl, savePath, onReceiveProgress: (rec, total) {
-        setState(() {
-          downloading = true;
-          // download = (rec / total) * 100;
-          downloadingStr =
-          "Downloading Image : $rec" ;
-
-        });
+    ///register a send port for the other isolates
+    IsolateNameServer.registerPortWithName(_receivePort.sendPort, "downloading");
 
 
-      } );
+    ///Listening for the data is comming other isolataes
+    _receivePort.listen((message) {
       setState(() {
-        downloading = false;
-        downloadingStr = "Completed";
+        progress = message[2];
       });
-    } catch (e) {
-      print(e.toString());
-    }
-  }
 
-  Future<String> getFilePath(uniqueFileName) async {
-    String path = '';
+      print(progress);
+    });
 
-    Directory dir = await getApplicationDocumentsDirectory();
 
-    path = '${dir.path}/$uniqueFileName';
-
-    return path;
+    FlutterDownloader.registerCallback(downloadingCallback);
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(primaryColor: Colors.pink),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Download File"),
-          backgroundColor: Colors.pink,
-        ),
-        body: Center(
-          child: downloading
-              ? Container(
-            height: 250,
-            width: 250,
-            child: Card(
-              color: Colors.pink,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const CircularProgressIndicator(
-                    backgroundColor: Colors.white,
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    downloadingStr,
-                    style: const TextStyle(color: Colors.white),
-                  )
-                ],
-              ),
-            ),
-          )
-              : Container(
-            height: 250,
-            width: 250,
-            child: Center(
-              child: Image.file(
-                File(savePath),
-                height: 200,
-              ),
-            ),
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+
+            Text("$progress", style: TextStyle(fontSize: 40),),
+
+            SizedBox(height: 60,),
+
+            FlatButton(
+              child: Text("Start Downloading"),
+              color: Colors.redAccent,
+              textColor: Colors.white,
+              onPressed: () async {
+                final status = await Permission.storage.request();
+
+                if (status.isGranted) {
+                  final externalDir = await getExternalStorageDirectory();
+
+                  final id = await FlutterDownloader.enqueue(
+                    url:
+                    "https://firebasestorage.googleapis.com/v0/b/storage-3cff8.appspot.com/o/2020-05-29%2007-18-34.mp4?alt=media&token=841fffde-2b83-430c-87c3-2d2fd658fd41",
+                    savedDir: externalDir.path,
+                    fileName: "download",
+                    showNotification: true,
+                    openFileFromNotification: true,
+                  );
+
+
+                } else {
+                  print("Permission deined");
+                }
+              },
+            )
+          ],
         ),
       ),
     );
