@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-
+import 'package:udemy/screens/base/base_screen.dart';
 
 void main() {
-  runApp(const App());
-  FirebaseFirestore.instance.collection('teste').add({'teste':'teste1'});
-
-
-
-
-  runApp(const App());
-
-
+  runApp( const MyApp());
 
 }
 
-class App extends StatelessWidget {
-  const App({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'loja',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: const BaseScreen(),
+    );
   }
 }
