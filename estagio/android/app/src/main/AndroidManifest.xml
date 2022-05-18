@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
-          package="com.example.estagio">
+          package="com.estagio.maracanau">
 
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
@@ -24,7 +24,7 @@
         </intent>
     </queries>
    <application
-        android:label="estagio"
+        android:label="App estagio campus Maracanaú"
         android:name="${applicationName}"
         android:icon="@mipmap/logo">
 
