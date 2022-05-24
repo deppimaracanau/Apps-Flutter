@@ -1,9 +1,19 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:udemyloja/helpers/validators.dart';
+import 'package:udemyloja/common/models/user.dart';
+import 'package:udemyloja/common/models/user_manager.dart';
+
+
 
 class LoginScreen extends StatelessWidget {
 
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController senhaController = TextEditingController();
+
+   LoginScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +32,7 @@ class LoginScreen extends StatelessWidget {
               shrinkWrap: true,
               children: [
                 TextFormField(
+                  controller: emailController,
                   decoration: const InputDecoration(
                     hintText: 'email',
                     border: OutlineInputBorder(),
@@ -36,8 +47,9 @@ class LoginScreen extends StatelessWidget {
                     return null;
                   },
                 ),
-                SizedBox(height: 10,),
+                const SizedBox(height: 10,),
                 TextFormField(
+                  controller: senhaController,
                   decoration: const InputDecoration(
                     hintText: 'senha',
                     border: OutlineInputBorder(),
@@ -69,19 +81,32 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
+                const SizedBox(height: 16,),
                 SizedBox(
                   height: 44,
                   child: ElevatedButton(
-                      onPressed: () {},
-                      //Color: Theme.of(context).primaryColor,
-                      child: const Text('Entrar')),
+                    onPressed: (){
+                      if(formKey.currentState!.validate()){
+                        print(emailController.text);
+                      }
+                    },
+                    // color: Theme.of(context).primaryColor,
+                    // textColor: Colors.white,
+                    child: const Text(
+                      'Entrar',
+                      style: TextStyle(
+                          fontSize: 18
+                      ),
+                    ),
+                  ),
                 )
               ],
             ),
+            ),
           ),
         ),
-      ),
     );
   }
 
 }
+

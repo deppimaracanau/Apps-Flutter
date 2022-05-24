@@ -82,7 +82,9 @@ class _EstagioState extends State<Estagio> {
   @override
   Widget build(BuildContext context) {
     final topPadding = MediaQuery.of(context).padding.top;
+
     return Container(
+
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [
@@ -93,36 +95,18 @@ class _EstagioState extends State<Estagio> {
           end: Alignment.bottomCenter,
         ),
       ),
+
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: SizedBox(
+
           width: double.infinity,
           child: Column(
             children: [
               const SizedBox(
                 height: 25,
-
               ),
-              // Container(
-              //   decoration: const BoxDecoration(
-              //     image: DecorationImage(
-              //       image: AssetImage('assets/titulo.gif'),
-              //       fit: BoxFit.cover,
-              //     )
-              //   ),
-              // ),
-              // const Text.rich(
-              //   TextSpan(
-              //     text: 'Documentos de estágio',
-              //     style: TextStyle(
-              //       fontFamily: 'Source Code Pro',
-              //       fontWeight: FontWeight.bold,
-              //       color: Color.fromRGBO(4, 2, 0,10),
-              //     ),
-              //   ),
-              //   style: TextStyle(fontSize: 30),
-              // ),
-              // //teste
+
               SizedBox(
                 height: topPadding,
               ),
@@ -131,7 +115,10 @@ class _EstagioState extends State<Estagio> {
                 height: 5,
               ),
 
-              const AnimatedImage(), //<= chamando a animação
+              const AnimatedImage(),
+              Container(
+                
+              ),//<= chamando a animação
 
               Expanded(
                 child: ListView.builder(
@@ -195,11 +182,13 @@ class _EstagioState extends State<Estagio> {
               ),
             ],
           ),
+
         ),
       ),
     );
   }
 }
+
 
 //avatar
 
@@ -274,7 +263,7 @@ Widget textSide(data) {
                 );
               } else {
                 if (kDebugMode) {
-                  print('Acesso negado!');
+                  print('erro no download!');
                 }
               }
             },
@@ -304,7 +293,7 @@ class AnimatedImageState extends State<AnimatedImage>
 
   late final Animation<Offset> _animation = Tween<Offset>(
     begin: Offset.zero,
-    end: const Offset(0.59, 0.30),
+    end: const Offset(2.30, -0.30),
   ).animate(
     CurvedAnimation(parent: _controller, curve: Curves.easeInCirc),
   );
@@ -319,7 +308,7 @@ class AnimatedImageState extends State<AnimatedImage>
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Image.asset('assets/titulo.png'),
+        Image.asset('assets/nuvens.png'),
         const SizedBox(height: 5),
         SlideTransition(
           position: _animation,

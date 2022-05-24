@@ -20,7 +20,7 @@ class ListDados {
       'link': 'https://ifce.edu.br/maracanau/menu/setor-de-estagios/subs-aquirvos-10_06/ficha-de-matricula.doc'
     },
     {
-      'name': 'assets/pokebola.gif',
+      'name': 'assets/botao03.gif',
       
       'titulo': 'Início de estágio',
       'subtitulo': 'Termo de compromisso\nde estágio e\nplano de atividades',
@@ -31,7 +31,7 @@ class ListDados {
     //================ fase02
 
     {
-      'name': 'assets/thor2.gif',
+      'name': 'assets/botao04.gif',
       
       'titulo': 'Fase intermediária',
       'subtitulo': 'Relatório diário de estágio',
@@ -39,7 +39,7 @@ class ListDados {
       'link': 'https://ifce.edu.br/maracanau/menu/setor-de-estagios/subs-aquirvos-10_06/relatorio-diario-de-atividades-2.doc'
     },
     {
-      'name': 'assets/mario.gif',
+      'name': 'assets/botao05.gif',
       
       'titulo': 'Fase intermediária',
       'subtitulo': 'Termo de compromisso\nde estágio e plano\nde atividades',
