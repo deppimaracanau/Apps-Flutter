@@ -1,1 +1,0 @@
-C:\Users\deppi\IdeaProjects\clinicaApp\android\app\src\main\kotlin\com\example\flutterapp\MainActivity.kt
