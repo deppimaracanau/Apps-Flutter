@@ -32,11 +32,11 @@ class Medico {
     nome: 'Richard Smith',
     fotoCaminho:
     'https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    Especialidade: Especialidade.kCardiologist,
+    especialidade: Especialidade.CCardiologista,
     comentarios: 120,
     pacientes: 310,
     curtidas: 220,
-    endereco: endereco.sanFransisco,
+    endereco: Endereco.sanFransisco,
     xpAnos: 2010,
     avaliacao: 4.5,
   );
@@ -45,11 +45,11 @@ class Medico {
     nome: 'Liliana Mondragon',
     fotoCaminho:
     'https://images.unsplash.com/photo-1591604021695-0c69b7c05981?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    Especialidade: Especialidade.kDermatologist,
+    especialidade: Especialidade.CDermatologista,
     comentarios: 120,
     pacientes: 310,
     curtidas: 220,
-    endereco: endereco.sanFransisco,
+    endereco: Endereco.sanFransisco,
     xpAnos: 2010,
     avaliacao: 4.5,
   );
@@ -57,11 +57,11 @@ class Medico {
     nome: 'Julissa Towers',
     fotoCaminho:
     'https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    Especialidade: Especialidade.kPediatrician,
+    especialidade: Especialidade.CPediatra,
     comentarios: 120,
     pacientes: 310,
     curtidas: 220,
-    endereco: endereco.sanFransisco,
+    endereco: Endereco.sanFransisco,
     xpAnos: 2010,
     avaliacao: 4.5,
   );
@@ -70,11 +70,11 @@ class Medico {
     nome: 'Edward Ghirca',
     fotoCaminho:
     'https://images.unsplash.com/photo-1580281658626-ee379f3cce93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    Especialidade: especialidade.kSurgeon,
+    especialidade: Especialidade.COrtopedista,
     comentarios: 120,
     pacientes: 310,
     curtidas: 220,
-    endereco: endereco.sanFransisco,
+    endereco: Endereco.sanFransisco,
     xpAnos: 2010,
     avaliacao: 4.5,
   );
@@ -82,11 +82,11 @@ class Medico {
     nome: 'Guido Mista',
     fotoCaminho:
     'https://images.unsplash.com/photo-1576669801775-ff43c5ab079d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    Especialidade: Especialidade.kCardiologist,
+    especialidade: Especialidade.CCardiologista,
     comentarios: 120,
     pacientes: 310,
     curtidas: 220,
-    endereco: endereco.sanFransisco,
+    endereco: Endereco.sanFransisco,
     xpAnos: 2010,
     avaliacao: 4.5,
   );
@@ -94,10 +94,10 @@ class Medico {
   static const listTopMedico = [
     Medico(
       nome: 'Iris Bohorquez',
-      Especialidade: Especialidade.kSurgeon,
+      especialidade: Especialidade.COrtopedista,
       comentarios: 203,
-      pngfotoCaminho: 'https://pngimg.com/uploads/Medico/Medico_PNG16043.png',
-      endereco: endereco.brownwood,
+      fotoPng: 'https://pngimg.com/uploads/Medico/Medico_PNG16043.png',
+      endereco: Endereco.brownwood,
       xpAnos: 2009,
       curtidas: 359,
       avaliacao: 4.7,
@@ -105,11 +105,11 @@ class Medico {
     ),
     Medico(
       nome: 'Namor Scoutia',
-      Especialidade: Especialidade.kUrologist,
+      especialidade: Especialidade.CUrologista,
       comentarios: 193,
-      pngfotoCaminho:
+      fotoPng:
       'http://www.pngall.com/wp-content/uploads/2018/05/Medico-Free-Download-PNG.png',
-      endereco: endereco.brownwood,
+      endereco: Endereco.brownwood,
       xpAnos: 2000,
       curtidas: 301,
       avaliacao: 4.5,
@@ -117,23 +117,23 @@ class Medico {
     ),
     Medico(
       nome: 'Alex Gospel',
-      Especialidade: Especialidade.kCardiologist,
+      especialidade: Especialidade.CCardiologista,
       comentarios: 210,
       xpAnos: 2012,
-      pngfotoCaminho:
+      fotoPng:
       'http://www.pngall.com/wp-content/uploads/2018/05/Medico.png',
-      endereco: endereco.brownwood,
+      endereco: Endereco.brownwood,
       curtidas: 324,
       avaliacao: 4.6,
       pacientes: 352,
     ),
     Medico(
       nome: 'Robert Peace',
-      Especialidade: Especialidade.kEndocrinologist,
+      especialidade: Especialidade.CEndocrinologista,
       comentarios: 173,
-      pngfotoCaminho:
+      fotoPng:
       'http://www.pngall.com/wp-content/uploads/2018/05/Medico-PNG-File-Download-Free.png',
-      endereco: endereco.brownwood,
+      endereco: Endereco.brownwood,
       xpAnos: 2010,
       curtidas: 239,
       avaliacao: 4.8,

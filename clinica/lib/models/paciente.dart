@@ -1,7 +1,7 @@
 import 'package:clinica/models/agenda.dart';
 import 'package:clinica/models/checkup.dart';
-export 'agenda.dart.dart';
-export 'checkup.dart.dart';
+export 'agenda.dart';
+export 'checkup.dart';
 
 class Paciente {
   const Paciente({
@@ -31,12 +31,12 @@ class Paciente {
     fotoCaminho:
     'https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fG1lbnxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=500&q=60',
     historicoDeconsulta: Agenda.listCompromisso,
-    proximaConsulta: Agenda.proximaConsulta,
+    proximaConsulta: Agenda.proximoCompromisso,
     telefone: '+52741137588',
     historicoMedico: const [
       DiagnosticoMedico(check: Checkup.peso, value: 149.7),
       DiagnosticoMedico(check: Checkup.altura, value: 170.7),
-      DiagnosticoMedico(check: Checkup.colesterol, value: 200),
+      DiagnosticoMedico(check: Checkup.colestterol, value: 200),
       DiagnosticoMedico(check: Checkup.eletrocardiograma, value: 60),
       DiagnosticoMedico(check: Checkup.pressao, value: 0.87),
       DiagnosticoMedico(check: Checkup.hemoglobina, value: 120),

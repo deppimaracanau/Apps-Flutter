@@ -43,8 +43,8 @@ class CardMedico extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                     gradient: const LinearGradient(
                       colors: [
-                        CorDoApp.kLightBlue,
-                        CorDoApp.kBlue,
+                        CorDoApp.cLightBlue,
+                        CorDoApp.cBlue,
                       ],
                     ),
                   ),
@@ -112,7 +112,7 @@ class _InformacaoMedico extends StatelessWidget {
           ),
         ),
         Text(
-          medico.especialidade!.nomeEspecialidade!,
+          medico.especialidade!.especialidade!,
           style: const TextStyle(
             height: 1,
             color: Colors.white70,
@@ -234,7 +234,7 @@ class _FundoBranco extends StatelessWidget {
       children: [
         Icon(
           iconData,
-          color: CorDoApp.kDarkTeal,
+          color: CorDoApp.cDarkTeal,
           size: 16,
         ),
         const SizedBox(width: 3),
@@ -243,7 +243,7 @@ class _FundoBranco extends StatelessWidget {
           style: const TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.w500,
-            color: CorDoApp.kDarkTeal,
+            color: CorDoApp.cDarkTeal,
           ),
         ),
       ],
