@@ -32,7 +32,7 @@ class Medico {
     nome: 'Richard Smith',
     fotoCaminho:
     'https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    Especilidade: Especilidade.kCardiologist,
+    Especialidade: Especialidade.kCardiologist,
     comentarios: 120,
     pacientes: 310,
     curtidas: 220,
@@ -45,7 +45,7 @@ class Medico {
     nome: 'Liliana Mondragon',
     fotoCaminho:
     'https://images.unsplash.com/photo-1591604021695-0c69b7c05981?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    Especilidade: Especilidade.kDermatologist,
+    Especialidade: Especialidade.kDermatologist,
     comentarios: 120,
     pacientes: 310,
     curtidas: 220,
@@ -57,7 +57,7 @@ class Medico {
     nome: 'Julissa Towers',
     fotoCaminho:
     'https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    Especilidade: Especilidade.kPediatrician,
+    Especialidade: Especialidade.kPediatrician,
     comentarios: 120,
     pacientes: 310,
     curtidas: 220,
@@ -70,7 +70,7 @@ class Medico {
     nome: 'Edward Ghirca',
     fotoCaminho:
     'https://images.unsplash.com/photo-1580281658626-ee379f3cce93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    Especilidade: Especilidade.kSurgeon,
+    Especialidade: especialidade.kSurgeon,
     comentarios: 120,
     pacientes: 310,
     curtidas: 220,
@@ -82,7 +82,7 @@ class Medico {
     nome: 'Guido Mista',
     fotoCaminho:
     'https://images.unsplash.com/photo-1576669801775-ff43c5ab079d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    Especilidade: Especilidade.kCardiologist,
+    Especialidade: Especialidade.kCardiologist,
     comentarios: 120,
     pacientes: 310,
     curtidas: 220,
@@ -94,7 +94,7 @@ class Medico {
   static const listTopMedico = [
     Medico(
       nome: 'Iris Bohorquez',
-      Especilidade: Especilidade.kSurgeon,
+      Especialidade: Especialidade.kSurgeon,
       comentarios: 203,
       pngfotoCaminho: 'https://pngimg.com/uploads/Medico/Medico_PNG16043.png',
       endereco: endereco.brownwood,
@@ -105,7 +105,7 @@ class Medico {
     ),
     Medico(
       nome: 'Namor Scoutia',
-      Especilidade: Especilidade.kUrologist,
+      Especialidade: Especialidade.kUrologist,
       comentarios: 193,
       pngfotoCaminho:
       'http://www.pngall.com/wp-content/uploads/2018/05/Medico-Free-Download-PNG.png',
@@ -117,7 +117,7 @@ class Medico {
     ),
     Medico(
       nome: 'Alex Gospel',
-      Especilidade: Especilidade.kCardiologist,
+      Especialidade: Especialidade.kCardiologist,
       comentarios: 210,
       xpAnos: 2012,
       pngfotoCaminho:
@@ -129,7 +129,7 @@ class Medico {
     ),
     Medico(
       nome: 'Robert Peace',
-      Especilidade: Especilidade.kEndocrinologist,
+      Especialidade: Especialidade.kEndocrinologist,
       comentarios: 173,
       pngfotoCaminho:
       'http://www.pngall.com/wp-content/uploads/2018/05/Medico-PNG-File-Download-Free.png',

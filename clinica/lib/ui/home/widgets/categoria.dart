@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:clinica/models/especialidade.dart';
+import 'package:clinica/models/especialidade.dart.dart';
 
-import '../../../models/especialidade.dart';
+import '../../../models/especialidade.dart.dart';
 
 class Categoria extends StatelessWidget {
   const Categoria({

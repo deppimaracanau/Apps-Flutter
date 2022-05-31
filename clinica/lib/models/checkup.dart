@@ -1,60 +1,60 @@
-enum TypeCheck {
-  weight,
-  hemoglobin,
-  bloodPressure,
-  electrocardiogram,
-  cholesterol,
-  glucose,
-  height
+enum Checkup {
+  peso,
+  hemoglobina,
+  pressao,
+  eletrocardiograma,
+  colestterol,
+  glicose,
+  altura
 }
-enum MedicalState { normal, alert, danger }
+enum Diagnostico { normal, alerta, atencao }
 
-class MedicalCheck {
-  const MedicalCheck({this.check, this.value});
+class DiagnosticoMedico {
+  const DiagnosticoMedico({this.check, this.value});
 
-  final TypeCheck? check;
+  final Checkup? check;
   final double? value;
 
   String? getSvgPath() {
     return {
-      TypeCheck.glucose: 'assets/svg/medical/mc-glucose.svg',
-      TypeCheck.weight: 'assets/svg/medical/mc-weight.svg',
-      TypeCheck.hemoglobin: 'assets/svg/medical/mc-hemoglobin.svg',
-      TypeCheck.bloodPressure: 'assets/svg/medical/mc-blood-pressure.svg',
-      TypeCheck.electrocardiogram: 'assets/svg/medical/mc-cardiogram.svg',
-      TypeCheck.cholesterol: 'assets/svg/medical/mc-cholesterol.svg',
-      TypeCheck.height: 'assets/svg/medical/mc-height.svg',
+      Checkup.glicose: 'assets/svg/medical/mc-glucose.svg',
+      Checkup.peso: 'assets/svg/medical/mc-weight.svg',
+      Checkup.hemoglobina: 'assets/svg/medical/mc-hemoglobin.svg',
+      Checkup.pressao: 'assets/svg/medical/mc-blood-pressure.svg',
+      Checkup.eletrocardiograma: 'assets/svg/medical/mc-cardiogram.svg',
+      Checkup.colestterol: 'assets/svg/medical/mc-cholesterol.svg',
+      Checkup.altura: 'assets/svg/medical/mc-height.svg',
     }[check!];
   }
 
   String? getMeasure() {
     return {
-      TypeCheck.glucose: 'g/dL',
-      TypeCheck.weight: 'kg',
-      TypeCheck.hemoglobin: 'g/dL',
-      TypeCheck.bloodPressure: 'mmHg',
-      TypeCheck.electrocardiogram: 'hz',
-      TypeCheck.cholesterol: 'mg/dL',
-      TypeCheck.height: 'cm'
+      Checkup.glicose: 'g/dL',
+      Checkup.peso: 'kg',
+      Checkup.hemoglobina: 'g/dL',
+      Checkup.pressao: 'mmHg',
+      Checkup.eletrocardiograma: 'hz',
+      Checkup.colestterol: 'mg/dL',
+      Checkup.altura: 'cm'
     }[check!];
   }
 
-  MedicalState getMedicalState() {
+  Diagnostico getDiagnostico() {
     switch (check) {
-      case TypeCheck.weight:
-        return MedicalState.alert;
-      case TypeCheck.glucose:
-        return MedicalState.normal;
-      case TypeCheck.hemoglobin:
-        return MedicalState.alert;
-      case TypeCheck.bloodPressure:
-        return MedicalState.normal;
-      case TypeCheck.electrocardiogram:
-        return MedicalState.normal;
-      case TypeCheck.cholesterol:
-        return MedicalState.danger;
+      case Checkup.peso:
+        return Diagnostico.alerta;
+      case Checkup.glicose:
+        return Diagnostico.normal;
+      case Checkup.hemoglobina:
+        return Diagnostico.alerta;
+      case Checkup.pressao:
+        return Diagnostico.normal;
+      case Checkup.eletrocardiograma:
+        return Diagnostico.normal;
+      case Checkup.colestterol:
+        return Diagnostico.atencao;
       default:
-        return MedicalState.normal;
+        return Diagnostico.normal;
     }
   }
 }
