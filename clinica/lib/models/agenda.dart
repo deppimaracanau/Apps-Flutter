@@ -23,28 +23,28 @@ class Agenda {
     RecomendacaoMedica.kNoEatFastFood,
   ];
 
-  static final nextAppointment = Agenda(
+  static final proximoCompromisso = Agenda(
     titulo: 'Heart care',
     data: DateTime.now().add(const Duration(days: 30)),
     medico: Medico.drRichard,
     recomendacaoMedica: _listIndications,
   );
 
-  static final skinCareAppointment = Agenda(
+  static final compromissoCuidadosPele = Agenda(
     titulo: 'Skin care',
     data: DateTime.now().subtract(const Duration(days: 10)),
     medico: Medico.drLiliana,
     recomendacaoMedica: _listIndications,
   );
 
-  static final sutureAppointment = Agenda(
+  static final compromissoSutura = Agenda(
     titulo: 'Suture revision',
     data: DateTime.now().subtract(const Duration(days: 30)),
     medico: Medico.drEdward,
     recomendacaoMedica: _listIndications,
   );
 
-  static final childAppointment = Agenda(
+  static final compromissoFilho = Agenda(
     titulo: 'Kid Vaccine',
     data: DateTime.now().subtract(const Duration(days: 50)),
     medico: Medico.drJulissa,

@@ -1,5 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:clinica/models/pacientes.dart';
+import 'package:clinica/models/paciente.dart';
 import 'package:flutter/material.dart';
 
 /// It creates a search bar with a profile picture
@@ -57,7 +57,7 @@ class Busca extends StatelessWidget {
                 color: Colors.white,
                 image: DecorationImage(
                     image: CachedNetworkImageProvider(
-                      Paciente.pacienteAtual.fotoUrl!,
+                      Paciente.pacienteAtual.fotoCaminho!,
                     ),
                     fit: BoxFit.cover)),
           ),

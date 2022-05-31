@@ -1,5 +1,5 @@
 import 'package:clinica/models/agenda.dart';
-import 'package:clinica/models/checkup.dart
+import 'package:clinica/models/checkup.dart';
 export 'agenda.dart.dart';
 export 'checkup.dart.dart';
 
