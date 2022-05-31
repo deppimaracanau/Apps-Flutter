@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_projects/projects/medical_appointment/models/md_doctor.dart';
-import 'package:flutter_projects/projects/medical_appointment/models/md_doctor_category.dart';
-import 'package:flutter_projects/projects/medical_appointment/models/md_patient.dart';
-import 'package:flutter_projects/projects/medical_appointment/ui/home/widgets/home_widgets.dart';
-import 'package:flutter_projects/projects/medical_appointment/utils/md_app_colors.dart';
+import 'package:clinica/models/medico.dart';
+import 'package:clinica/models/especialidade.dart';
+import 'package:clinica/models/paciente.dart';
+import 'package:clinica/ui/home/widgets/homewidiget.dart';
+import 'package:clinica/cores/cordoapp.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class MedicalHomePage extends StatefulWidget {
-  const MedicalHomePage({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
-  MedicalHomePageState createState() => MedicalHomePageState();
+  HomePageState createState() => HomePageState();
 }
 
-class MedicalHomePageState extends State<MedicalHomePage> {
-  bool expandAppointment = false;
-  bool showAppointmentDetails = false;
+class HomePageState extends State<HomePage> {
+  bool abrirAgenda = false;
+  bool mostrarDetalhesAgenda = false;
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    const expandDuration = Duration(milliseconds: 400);
-    final heightCurtain = (size.width * .75).clamp(310.0, 340.0);
-    final nextAppointment = MedicalAppointment.nextAppointment;
+    const duracao = Duration(milliseconds: 400);
+    final altura = (size.width * .75).clamp(310.0, 340.0);
+    final proximoCompromisso = Agenda.proximoCompromisso;
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,
@@ -31,7 +31,7 @@ class MedicalHomePageState extends State<MedicalHomePage> {
           //----BOTTOM BODY ITEMS
           //-----------------------------------
           _BodyHome(
-            contentPadding: EdgeInsets.only(top: heightCurtain - 20),
+            contentPadding: EdgeInsets.only(top: altura - 20),
           ),
           //-----------------------------------
           //----TOP BODY WIDGETS
@@ -42,9 +42,9 @@ class MedicalHomePageState extends State<MedicalHomePage> {
             top: 0,
             left: 0,
             right: 0,
-            height: expandAppointment ? heightCurtain + 280 : heightCurtain,
+            height: expandAppointment ? altura + 280 : altura,
             child: CustomPaint(
-              painter: TonguePainter(curveRadius: 30),
+              painter: Pintor(curveRadius: 30),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -54,7 +54,7 @@ class MedicalHomePageState extends State<MedicalHomePage> {
                   //---------------------------------------------
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15),
-                    child: SearchAppBar(),
+                    child: Busca(),
                   ),
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
@@ -71,7 +71,7 @@ class MedicalHomePageState extends State<MedicalHomePage> {
                   //-----NEXT APPOINTMENT CARD
                   //----------------------------------
                   NextAppointmentCard(
-                    height: heightCurtain - 175,
+                    height: altura - 175,
                     margin: const EdgeInsets.symmetric(horizontal: 15),
                     mdAppointment: nextAppointment,
                   ),
