@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:clinica/models/especialidade.dart.dart';
+import 'package:clinica/models/especialidade.dart';
 
-import '../../../models/especialidade.dart.dart';
+import '../../../models/especialidade.dart';
 
 class Categoria extends StatelessWidget {
   const Categoria({
@@ -23,8 +23,8 @@ class Categoria extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
         gradient: LinearGradient(
           colors: [
-            Color(categoria.cor!),
-            Color(categoria.cor!).withAlpha(1000),
+            Color(categoria.cores!),
+            Color(categoria.cores!).withAlpha(1000),
           ],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
@@ -70,7 +70,7 @@ class Categoria extends StatelessWidget {
                 const Spacer(),
                 Text.rich(
                   TextSpan(
-                    text: 'Medico ${categoria.medico}\n',
+                    text: 'Medico ${categoria.medicos}\n',
                     children: [
                       TextSpan(
                         text: 'Especialidae ${categoria.nomeEspecialidade}',

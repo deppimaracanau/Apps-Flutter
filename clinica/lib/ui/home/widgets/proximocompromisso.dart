@@ -1,5 +1,4 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:clinica/models/agenda.dart';
 import 'package:clinica/cores/cordoapp.dart';
@@ -79,7 +78,7 @@ class ProximoCompromisso extends StatelessWidget{
                     const SizedBox(height: 10),
                     _buildTextRich(
                       title: "Date",
-                      subtitle: MedCalendario.formatToTextDate(agenda.data!),
+                      subtitle: Calendario.formatToTextDate(agenda.data!),
                     ),
                     const Spacer(),
                     //-------------------------------
@@ -101,7 +100,7 @@ class ProximoCompromisso extends StatelessWidget{
                           child: CircleAvatar(
                             backgroundColor: Colors.white,
                             backgroundImage:
-                            CachedNetworkImageProvider(medico.fotoUrl!),
+                            CachedNetworkImageProvider(medico.fotoCaminho!),
                           ),
                         ),
                         const SizedBox(width: 10),
@@ -126,11 +125,11 @@ class ProximoCompromisso extends StatelessWidget{
                 borderRadius:
                 BorderRadius.only(bottomLeft: Radius.circular(20)),),
               child: Text(
-                MedCalendario.extractHourDate(agenda.data!),
+                Calendario.extractHourDate(agenda.data!),
                 style: const TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.bold,
-                  color: CorDoApp.kDarkBlue,
+                  color: CorDoApp.cDarkBlue,
                 ),
               ),
             ),

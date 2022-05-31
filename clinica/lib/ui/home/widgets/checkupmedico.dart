@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:clinica/models/checkup.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../models/checkupmedico.dart';
+
 /// It's a card that shows the checkup values and the medical state
 
 class CardCheckup extends StatelessWidget {
@@ -33,7 +35,7 @@ class CardCheckup extends StatelessWidget {
           child: Row(
             children: [
               Expanded(
-                child: SvgPicture.asset(checkupMedico.getSvgCaminho()!),
+                child: SvgPicture.asset(checkupMedico.caminhoImagem!),
               ),
               const SizedBox(width: 5),
               Expanded(
@@ -44,7 +46,7 @@ class CardCheckup extends StatelessWidget {
                   children: [
                     /// Getting the enum value and showing it in the screen.
                     Text(
-                      checkupMedico.check.toString().split('.')[1],
+                      checkupMedico.estatus.toString().split('.')[1],
                       overflow: TextOverflow.fade,
                       softWrap: false,
                       style: TextStyle(
@@ -54,13 +56,13 @@ class CardCheckup extends StatelessWidget {
                     ),
                     /// Showing the value of the checkup and the parameters.
                     Text(
-                      '${checkupMedico.value.toString()} '
+                      '${checkupMedico.informacao.toString()} '
                           '${checkupMedico.getParamentros()}',
                       overflow: TextOverflow.fade,
                       softWrap: false,
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: CorDoApp.kLightCyan,
+                        color: CorDoApp.cLightCyan,
                       ),
                     ),
                     const SizedBox(height: 5),
@@ -113,3 +115,4 @@ class CardCheckup extends StatelessWidget {
     }[TriagemMedica];
   }
 }
+

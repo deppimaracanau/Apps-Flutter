@@ -43,4 +43,8 @@ class CheckupMedico {
       estatus: Diagnostico.alert,
     ),
   ];
+
+
+
+  
 }

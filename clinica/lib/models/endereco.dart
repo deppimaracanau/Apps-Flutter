@@ -14,7 +14,7 @@ class Endereco {
   final String? numero;
   final String? cep;
 
-  String getLongAddress() {
+  String getEnderecoCompleto() {
     return "$numero $rua, $cidade $cep";
   }
 

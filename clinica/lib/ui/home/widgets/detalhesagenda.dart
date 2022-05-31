@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:clinica/models/agenda.dart';
+import 'package:clinica/models/recomendacaomedica.dart';
 import 'package:flutter_svg/svg.dart';
 
-class AppointmentDetails extends StatelessWidget {
-  const AppointmentDetails({
+class DetalhesDaAgenda extends StatelessWidget {
+  const DetalhesDaAgenda({
     Key? key,
-    required this.mdAppointment,
+    required this.agenda,
   }) : super(key: key);
-  final MedicalAppointment mdAppointment;
+  final Agenda agenda;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class AppointmentDetails extends StatelessWidget {
         const  Padding(
           padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
           child: Text(
-            'Hospital Address',
+            'Endereco da clinica',
             style: whiteSectionStyle,
           ),
         ),
@@ -45,7 +46,7 @@ class AppointmentDetails extends StatelessWidget {
               const SizedBox(width: 10),
               Flexible(
                 child: Text(
-                  mdAppointment.doctor!.mdAddress!.getLongAddress(),
+                  agenda.medico!.endereco!.getEnderecoCompleto(),
                   style: const TextStyle(
                     fontSize: 16,
                     color: Colors.white70,
@@ -58,7 +59,7 @@ class AppointmentDetails extends StatelessWidget {
         const Padding(
           padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
           child: Text(
-            'Medical indications',
+            'Recomendacções médicas',
             style: whiteSectionStyle,
           ),
         ),
@@ -68,12 +69,12 @@ class AppointmentDetails extends StatelessWidget {
         SizedBox(
           height: 90,
           child: ListView.builder(
-            itemCount: mdAppointment.medicalIndications!.length,
+            itemCount: agenda.recomendacaoMedica!.length,
             physics: const BouncingScrollPhysics(),
             padding: const EdgeInsets.symmetric(horizontal: 15),
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
-              final mdIndication = mdAppointment.medicalIndications![index];
+              final agenda1 = agenda.recomendacaoMedica![index];
               return Container(
                 width: 180,
                 padding: const EdgeInsets.all(10),
@@ -87,14 +88,14 @@ class AppointmentDetails extends StatelessWidget {
                   children: [
                     Expanded(
                       child: SvgPicture.asset(
-                        mdIndication.svgIconPath!,
+                        RecomendacaoMedica.svgCaminho!,
                         color: Colors.white,
                       ),),
                     const SizedBox(width: 5),
                     Expanded(
                       flex: 2,
                       child: Text(
-                        mdIndication.description!,
+                        RecomendacaoMedica.descricao!,
                         maxLines: 3,
                         style: const TextStyle(
                           color: Colors.white,

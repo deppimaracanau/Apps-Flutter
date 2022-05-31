@@ -10,7 +10,7 @@ class Pintor extends CustomPainter  {
   void paint(Canvas canvas, Size size) {
     final pintor = Paint()
       ..shader = const LinearGradient(
-        colors: [CorDoApp.kBlue, CorDoApp.kDarkBlue],
+        colors: [CorDoApp.cBlue, CorDoApp.cBlue],
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
       ).createShader(
