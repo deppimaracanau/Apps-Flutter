@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart' show IconData;
-import 'package:flutter_projects/projects/medical_appointment/utils/md_icons_icons.dart';
+import 'package:clinica/cores/iconsdoapp.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 
 class DoctorCategory {

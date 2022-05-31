@@ -1,46 +1,46 @@
-enum MedicalState { danger, normal, alert }
+enum Diagnostico { danger, normal, alert }
 
-class MedicalCheckItem {
-  const MedicalCheckItem({this.title, this.info, this.pathImage, this.state});
+class CheckupMedico {
+  const CheckupMedico({this.titulo, this.informacao, this.caminhoImagem, this.estatus});
 
-  final String? title;
-  final String? info;
-  final String? pathImage;
-  final MedicalState? state;
+  final String? titulo;
+  final String? informacao;
+  final String? caminhoImagem;
+  final Diagnostico? estatus;
 
   static const listItemCheck = [
-    MedicalCheckItem(
-      title: 'Weight & Height',
-      info: '149.7 lb - 172 cm',
-      pathImage: 'assets/img/medical/weight.png',
-      state: MedicalState.normal,),
-    MedicalCheckItem(
-      title: 'Blood pressure',
-      info: '130/90 mm',
-      pathImage: 'assets/img/medical/arm.png',
-      state: MedicalState.alert,),
-    MedicalCheckItem(
-      title: 'Cholesterol',
-      info: '200 mg/dl',
-      pathImage: 'assets/img/medical/cholesterol.png',
-      state: MedicalState.alert,),
-    MedicalCheckItem(
-      title: 'Glucose',
-      info: '200 mg/dl',
-      pathImage: 'assets/img/medical/diabetes-test.png',
-      state: MedicalState.danger,
+    CheckupMedico(
+      titulo: 'Weight & Height',
+      informacao: '149.7 lb - 172 cm',
+      caminhoImagem: 'assets/img/medical/weight.png',
+      estatus: Diagnostico.normal,),
+    CheckupMedico(
+      titulo: 'Blood pressure',
+      informacao: '130/90 mm',
+      caminhoImagem: 'assets/img/medical/arm.png',
+      estatus: Diagnostico.alert,),
+    CheckupMedico(
+      titulo: 'Cholesterol',
+      informacao: '200 mg/dl',
+      caminhoImagem: 'assets/img/medical/cholesterol.png',
+      estatus: Diagnostico.alert,),
+    CheckupMedico(
+      titulo: 'Glucose',
+      informacao: '200 mg/dl',
+      caminhoImagem: 'assets/img/medical/diabetes-test.png',
+      estatus: Diagnostico.danger,
     ),
-    MedicalCheckItem(
-      title: 'Lung health',
-      info: '90 %',
-      pathImage: 'assets/img/medical/lungs.png',
-      state: MedicalState.normal,
+    CheckupMedico(
+      titulo: 'Lung health',
+      informacao: '90 %',
+      caminhoImagem: 'assets/img/medical/lungs.png',
+      estatus: Diagnostico.normal,
     ),
-    MedicalCheckItem(
-      title: 'Stress',
-      info: '40 %',
-      pathImage: 'assets/img/medical/brain.png',
-      state: MedicalState.alert,
+    CheckupMedico(
+      titulo: 'Stress',
+      informacao: '40 %',
+      caminhoImagem: 'assets/img/medical/brain.png',
+      estatus: Diagnostico.alert,
     ),
   ];
 }

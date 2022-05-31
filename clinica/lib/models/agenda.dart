@@ -1,59 +1,59 @@
-import 'package:flutter_projects/projects/medical_appointment/models/md_doctor.dart';
-import 'package:flutter_projects/projects/medical_appointment/models/md_indication.dart';
+import 'package:clinica/models/medico.dart';
+import 'package:clinica/models/recomendacaomedica.dart';
 
-class MedicalAppointment {
-  MedicalAppointment({
-    this.title,
-    this.date,
-    this.doctor,
-    this.medicalIndications,
+class Agenda {
+  Agenda({
+    this.titulo,
+    this.data,
+    this.medico,
+    this.recomendacaoMedica,
   });
 
-  final String? title;
-  DateTime? date;
-  final Doctor? doctor;
-  final List<MedicalIndication>? medicalIndications;
+  final String? titulo;
+  DateTime? data;
+  final Medico? medico;
+  final List<RecomendacaoMedica>? recomendacaoMedica;
 
   static final _listIndications = [
-    MedicalIndication.kDrinkWater,
-    MedicalIndication.kEatVegetables,
-    MedicalIndication.kExercise,
-    MedicalIndication.kNoCoffee,
-    MedicalIndication.kNoDrinkAlcohol,
-    MedicalIndication.kNoEatFastFood,
+    RecomendacaoMedica.kDrinkWater,
+    RecomendacaoMedica.kEatVegetables,
+    RecomendacaoMedica.kExercise,
+    RecomendacaoMedica.kNoCoffee,
+    RecomendacaoMedica.kNoDrinkAlcohol,
+    RecomendacaoMedica.kNoEatFastFood,
   ];
 
-  static final nextAppointment = MedicalAppointment(
-    title: 'Heart care',
-    date: DateTime.now().add(const Duration(days: 30)),
-    doctor: Doctor.drRichard,
-    medicalIndications: _listIndications,
+  static final nextAppointment = Agenda(
+    titulo: 'Heart care',
+    data: DateTime.now().add(const Duration(days: 30)),
+    medico: Medico.drRichard,
+    recomendacaoMedica: _listIndications,
   );
 
-  static final skinCareAppointment = MedicalAppointment(
-    title: 'Skin care',
-    date: DateTime.now().subtract(const Duration(days: 10)),
-    doctor: Doctor.drLiliana,
-    medicalIndications: _listIndications,
+  static final skinCareAppointment = Agenda(
+    titulo: 'Skin care',
+    data: DateTime.now().subtract(const Duration(days: 10)),
+    medico: Medico.drLiliana,
+    recomendacaoMedica: _listIndications,
   );
 
-  static final sutureAppointment = MedicalAppointment(
-    title: 'Suture revision',
-    date: DateTime.now().subtract(const Duration(days: 30)),
-    doctor: Doctor.drEdward,
-    medicalIndications: _listIndications,
+  static final sutureAppointment = Agenda(
+    titulo: 'Suture revision',
+    data: DateTime.now().subtract(const Duration(days: 30)),
+    medico: Medico.drEdward,
+    recomendacaoMedica: _listIndications,
   );
 
-  static final childAppointment = MedicalAppointment(
-    title: 'Kid Vaccine',
-    date: DateTime.now().subtract(const Duration(days: 50)),
-    doctor: Doctor.drJulissa,
-    medicalIndications: _listIndications,
+  static final childAppointment = Agenda(
+    titulo: 'Kid Vaccine',
+    data: DateTime.now().subtract(const Duration(days: 50)),
+    medico: Medico.drJulissa,
+    recomendacaoMedica: _listIndications,
   );
 
-  static final listAppointment = [
-    skinCareAppointment,
-    sutureAppointment,
-    childAppointment,
+  static final listCompromisso = [
+    compromissoCuidadosPele,
+    compromissoSutura,
+    compromissoFilho,
   ];
 }

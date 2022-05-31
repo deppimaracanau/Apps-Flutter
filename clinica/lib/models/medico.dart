@@ -1,143 +1,143 @@
-import 'package:flutter_projects/projects/medical_appointment/models/md_address.dart';
-import 'package:flutter_projects/projects/medical_appointment/models/md_doctor_category.dart';
+import 'package:clinica/models/especialidade.dart';
+import 'package:clinica/models/endereco.dart';
 
-class Doctor {
+class Medico {
 
-  const Doctor({
-    this.name,
-    this.doctorCategory,
-    this.graduationYear,
-    this.patients,
-    this.mdAddress,
-    this.rate,
-    this.likes,
-    this.comments,
-    this.pngPhotoUrl,
-    this.photoUrl,
+  const Medico({
+    this.nome,
+    this.especialidade,
+    this.xpAnos,
+    this.pacientes,
+    this.endereco,
+    this.avaliacao,
+    this.curtidas,
+    this.comentarios,
+    this.fotoPng,
+    this.fotoCaminho,
   });
 
-  final String? name;
-  final DoctorCategory? doctorCategory;
-  final int? patients;
-  final double? rate;
-  final int? likes;
-  final int? graduationYear;
-  final int? comments;
-  final String? pngPhotoUrl;
-  final String? photoUrl;
-  final MdAddress? mdAddress;
+  final String? nome;
+  final Especialidade? especialidade;
+  final int? pacientes;
+  final double? avaliacao;
+  final int? curtidas;
+  final int? xpAnos;
+  final int? comentarios;
+  final String? fotoPng;
+  final String? fotoCaminho;
+  final Endereco? endereco;
 
 
-  static const  drRichard = Doctor(
-    name: 'Richard Smith',
-    photoUrl:
+  static const  drRichard = Medico(
+    nome: 'Richard Smith',
+    fotoCaminho:
     'https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    doctorCategory: DoctorCategory.kCardiologist,
-    comments: 120,
-    patients: 310,
-    likes: 220,
-    mdAddress: MdAddress.sanFransisco,
-    graduationYear: 2010,
-    rate: 4.5,
+    Especilidade: Especilidade.kCardiologist,
+    comentarios: 120,
+    pacientes: 310,
+    curtidas: 220,
+    endereco: endereco.sanFransisco,
+    xpAnos: 2010,
+    avaliacao: 4.5,
   );
 
-  static const drLiliana = Doctor(
-    name: 'Liliana Mondragon',
-    photoUrl:
+  static const drLiliana = Medico(
+    nome: 'Liliana Mondragon',
+    fotoCaminho:
     'https://images.unsplash.com/photo-1591604021695-0c69b7c05981?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    doctorCategory: DoctorCategory.kDermatologist,
-    comments: 120,
-    patients: 310,
-    likes: 220,
-    mdAddress: MdAddress.sanFransisco,
-    graduationYear: 2010,
-    rate: 4.5,
+    Especilidade: Especilidade.kDermatologist,
+    comentarios: 120,
+    pacientes: 310,
+    curtidas: 220,
+    endereco: endereco.sanFransisco,
+    xpAnos: 2010,
+    avaliacao: 4.5,
   );
-  static const drJulissa = Doctor(
-    name: 'Julissa Towers',
-    photoUrl:
+  static const drJulissa = Medico(
+    nome: 'Julissa Towers',
+    fotoCaminho:
     'https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    doctorCategory: DoctorCategory.kPediatrician,
-    comments: 120,
-    patients: 310,
-    likes: 220,
-    mdAddress: MdAddress.sanFransisco,
-    graduationYear: 2010,
-    rate: 4.5,
+    Especilidade: Especilidade.kPediatrician,
+    comentarios: 120,
+    pacientes: 310,
+    curtidas: 220,
+    endereco: endereco.sanFransisco,
+    xpAnos: 2010,
+    avaliacao: 4.5,
   );
 
-  static const drEdward = Doctor(
-    name: 'Edward Ghirca',
-    photoUrl:
+  static const drEdward = Medico(
+    nome: 'Edward Ghirca',
+    fotoCaminho:
     'https://images.unsplash.com/photo-1580281658626-ee379f3cce93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    doctorCategory: DoctorCategory.kSurgeon,
-    comments: 120,
-    patients: 310,
-    likes: 220,
-    mdAddress: MdAddress.sanFransisco,
-    graduationYear: 2010,
-    rate: 4.5,
+    Especilidade: Especilidade.kSurgeon,
+    comentarios: 120,
+    pacientes: 310,
+    curtidas: 220,
+    endereco: endereco.sanFransisco,
+    xpAnos: 2010,
+    avaliacao: 4.5,
   );
-  static const drGuido = Doctor(
-    name: 'Guido Mista',
-    photoUrl:
+  static const drGuido = Medico(
+    nome: 'Guido Mista',
+    fotoCaminho:
     'https://images.unsplash.com/photo-1576669801775-ff43c5ab079d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    doctorCategory: DoctorCategory.kCardiologist,
-    comments: 120,
-    patients: 310,
-    likes: 220,
-    mdAddress: MdAddress.sanFransisco,
-    graduationYear: 2010,
-    rate: 4.5,
+    Especilidade: Especilidade.kCardiologist,
+    comentarios: 120,
+    pacientes: 310,
+    curtidas: 220,
+    endereco: endereco.sanFransisco,
+    xpAnos: 2010,
+    avaliacao: 4.5,
   );
 
-  static const listTopDoctor = [
-    Doctor(
-      name: 'Iris Bohorquez',
-      doctorCategory: DoctorCategory.kSurgeon,
-      comments: 203,
-      pngPhotoUrl: 'https://pngimg.com/uploads/doctor/doctor_PNG16043.png',
-      mdAddress: MdAddress.brownwood,
-      graduationYear: 2009,
-      likes: 359,
-      rate: 4.7,
-      patients: 402,
+  static const listTopMedico = [
+    Medico(
+      nome: 'Iris Bohorquez',
+      Especilidade: Especilidade.kSurgeon,
+      comentarios: 203,
+      pngfotoCaminho: 'https://pngimg.com/uploads/Medico/Medico_PNG16043.png',
+      endereco: endereco.brownwood,
+      xpAnos: 2009,
+      curtidas: 359,
+      avaliacao: 4.7,
+      pacientes: 402,
     ),
-    Doctor(
-      name: 'Namor Scoutia',
-      doctorCategory: DoctorCategory.kUrologist,
-      comments: 193,
-      pngPhotoUrl:
-      'http://www.pngall.com/wp-content/uploads/2018/05/Doctor-Free-Download-PNG.png',
-      mdAddress: MdAddress.brownwood,
-      graduationYear: 2000,
-      likes: 301,
-      rate: 4.5,
-      patients: 320,
+    Medico(
+      nome: 'Namor Scoutia',
+      Especilidade: Especilidade.kUrologist,
+      comentarios: 193,
+      pngfotoCaminho:
+      'http://www.pngall.com/wp-content/uploads/2018/05/Medico-Free-Download-PNG.png',
+      endereco: endereco.brownwood,
+      xpAnos: 2000,
+      curtidas: 301,
+      avaliacao: 4.5,
+      pacientes: 320,
     ),
-    Doctor(
-      name: 'Alex Gospel',
-      doctorCategory: DoctorCategory.kCardiologist,
-      comments: 210,
-      graduationYear: 2012,
-      pngPhotoUrl:
-      'http://www.pngall.com/wp-content/uploads/2018/05/Doctor.png',
-      mdAddress: MdAddress.brownwood,
-      likes: 324,
-      rate: 4.6,
-      patients: 352,
+    Medico(
+      nome: 'Alex Gospel',
+      Especilidade: Especilidade.kCardiologist,
+      comentarios: 210,
+      xpAnos: 2012,
+      pngfotoCaminho:
+      'http://www.pngall.com/wp-content/uploads/2018/05/Medico.png',
+      endereco: endereco.brownwood,
+      curtidas: 324,
+      avaliacao: 4.6,
+      pacientes: 352,
     ),
-    Doctor(
-      name: 'Robert Peace',
-      doctorCategory: DoctorCategory.kEndocrinologist,
-      comments: 173,
-      pngPhotoUrl:
-      'http://www.pngall.com/wp-content/uploads/2018/05/Doctor-PNG-File-Download-Free.png',
-      mdAddress: MdAddress.brownwood,
-      graduationYear: 2010,
-      likes: 239,
-      rate: 4.8,
-      patients: 298,
+    Medico(
+      nome: 'Robert Peace',
+      Especilidade: Especilidade.kEndocrinologist,
+      comentarios: 173,
+      pngfotoCaminho:
+      'http://www.pngall.com/wp-content/uploads/2018/05/Medico-PNG-File-Download-Free.png',
+      endereco: endereco.brownwood,
+      xpAnos: 2010,
+      curtidas: 239,
+      avaliacao: 4.8,
+      pacientes: 298,
     )
   ];
 }
