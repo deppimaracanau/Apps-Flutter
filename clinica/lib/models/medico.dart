@@ -145,5 +145,4 @@ class Medico {
     )
   ];
 
-  get categoria => null;
 }

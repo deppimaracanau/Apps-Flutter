@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart' show IconData;
 import 'package:clinica/cores/iconsdoapp.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+/// The class Especialidade is a class that has a constructor that takes in a map of
+/// strings to dynamic objects, and has a bunch of fields that are all final
 class Especialidade {
   const Especialidade._({
     this.iconData,
@@ -11,6 +13,8 @@ class Especialidade {
     this.cores,
   });
 
+  /// A constructor that takes in a map of strings to dynamic objects, and has a
+  /// bunch of fields that are all final
   final String? nomeEspecialidade;
   final int? espc;
   final int? medicos;

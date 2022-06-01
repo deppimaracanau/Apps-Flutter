@@ -18,7 +18,7 @@ class ClinicaApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //removida a ! instance
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
       SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
     });
     return MaterialApp(

@@ -9,11 +9,11 @@ class Categoria extends StatelessWidget {
   const Categoria({
     Key? key,
     required this.categoria,
-    required this.nomeCategoria,
+
   }) : super(key: key);
 
   final Especialidade categoria;
-  final Especialidade nomeCategoria;
+
 
   @override
   /// A function that returns a widget.

@@ -10,11 +10,11 @@ import '../../../models/especialidade.dart';
 class CardMedico extends StatelessWidget {
   const CardMedico({
     Key? key,
-    required this.medico, required this.categoria,
+    required this.medico, required this.nomeEspecilidade,
   }) : super(key: key);
 
   final Medico medico;
-  final Especialidade categoria;
+  final Especialidade nomeEspecilidade;
 
   @override
   /// It creates a stack with two widgets
@@ -138,7 +138,7 @@ class _InformacaoMedico extends StatelessWidget {
         ),
         //atenção nesse bloco.
         Text(
-        medico.categoria!.nomeCategoria!,
+        medico.especialidade!.nomeEspecialidade!,
           style: const TextStyle(
             height: 1,
             color: Colors.white70,

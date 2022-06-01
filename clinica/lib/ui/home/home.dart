@@ -79,7 +79,7 @@ class HomePageState extends State<HomePage> {
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                     child: Text(
-                      'Your next appointment',
+                      'Seu proximo compromisso',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 18,
@@ -225,8 +225,9 @@ class Home extends StatelessWidget {
             physics: const BouncingScrollPhysics(),
             padding: const EdgeInsets.symmetric(horizontal: 20),
             itemBuilder: (context, index) {
-              final especialidade = Especialidade.especialidades[index];
-              return Especialidade(especialidade: especialidade);
+              //o segredo tá aqui n esquecer
+              final categoria = Especialidade.especialidades[index];
+              return Categoria(categoria: categoria);
             },
           ),
         ),
@@ -241,7 +242,7 @@ class Home extends StatelessWidget {
           ),
         ),
         //---------------------------------
-        //------TOP DOCTORS LIST
+        //------Lista médicos
         //---------------------------------
         /// Creating a list of doctors.
         SizedBox(
@@ -254,7 +255,7 @@ class Home extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15),
             itemBuilder: (context, index) {
               final medico = Medico.listaMedico[index];
-              return medico(medico: medico);
+              return Medico(medico: medico);
             },
           ),
         ),
