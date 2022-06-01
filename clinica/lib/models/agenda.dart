@@ -14,41 +14,41 @@ class Agenda {
   final Medico? medico;
   final List<RecomendacaoMedica>? recomendacaoMedica;
 
-  static final _listIndications = [
-    RecomendacaoMedica.kDrinkWater,
-    RecomendacaoMedica.kEatVegetables,
-    RecomendacaoMedica.kExercise,
-    RecomendacaoMedica.kNoCoffee,
-    RecomendacaoMedica.kNoDrinkAlcohol,
-    RecomendacaoMedica.kNoEatFastFood,
+  static final _listaRecomendacao = [
+    RecomendacaoMedica.cBeberAgua,
+    RecomendacaoMedica.cComaVegetais,
+    RecomendacaoMedica.cFacaExercicios,
+    RecomendacaoMedica.cSemCafe,
+    RecomendacaoMedica.cSemAlcool,
+    RecomendacaoMedica.cSemFastfood,
   ];
 
   static final proximoCompromisso = Agenda(
     titulo: 'Heart care',
     data: DateTime.now().add(const Duration(days: 30)),
     medico: Medico.drRichard,
-    recomendacaoMedica: _listIndications,
+    recomendacaoMedica: _listaRecomendacao,
   );
 
   static final compromissoCuidadosPele = Agenda(
     titulo: 'Skin care',
     data: DateTime.now().subtract(const Duration(days: 10)),
     medico: Medico.drLiliana,
-    recomendacaoMedica: _listIndications,
+    recomendacaoMedica: _listaRecomendacao,
   );
 
   static final compromissoSutura = Agenda(
     titulo: 'Suture revision',
     data: DateTime.now().subtract(const Duration(days: 30)),
     medico: Medico.drEdward,
-    recomendacaoMedica: _listIndications,
+    recomendacaoMedica: _listaRecomendacao,
   );
 
   static final compromissoFilho = Agenda(
     titulo: 'Kid Vaccine',
     data: DateTime.now().subtract(const Duration(days: 50)),
     medico: Medico.drJulissa,
-    recomendacaoMedica: _listIndications,
+    recomendacaoMedica: _listaRecomendacao,
   );
 
   static final listCompromisso = [

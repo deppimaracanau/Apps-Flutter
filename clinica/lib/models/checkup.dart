@@ -27,7 +27,7 @@ class DiagnosticoMedico {
     }[check!];
   }
 
-  String? getMeasure() {
+  String? getParamentros() {
     return {
       Checkup.glicose: 'g/dL',
       Checkup.peso: 'kg',

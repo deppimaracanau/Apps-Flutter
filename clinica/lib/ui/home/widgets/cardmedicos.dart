@@ -4,20 +4,23 @@ import 'package:clinica/ui/home/widgets/homewidiget.dart';
 import 'package:flutter/material.dart';
 import 'package:clinica/cores/cordoapp.dart';
 
+import '../../../models/especialidade.dart';
+
 class CardMedico extends StatelessWidget {
   const CardMedico({
     Key? key,
-    required this.medico,
+    required this.medico, required this.categoria,
   }) : super(key: key);
 
   final Medico medico;
+  final Especialidade categoria;
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
         //--------------------------------------------
-        //------LIKE, REVIEWS AND MESSAGE BUTTONS
+        //------Curtidas,opniões e mensagens
         //-------------------------------------------
         _FundoBranco(
           medico: medico,
@@ -29,7 +32,7 @@ class CardMedico extends StatelessWidget {
             child: Stack(
               children: <Widget>[
                 //----------------------------------
-                //-----BLUE BACKGROUND
+                //-----Fundo azul
                 //---------------------------------
                 Container(
                   width: 280,
@@ -51,7 +54,7 @@ class CardMedico extends StatelessWidget {
                   child: _InformacaoMedico(medico: medico),
                 ),
                 //-----------------------------
-                //------PNG medico IMAGEM
+                //------imagem
                 //-----------------------------
                 Positioned(
                   bottom: 0,
@@ -111,8 +114,9 @@ class _InformacaoMedico extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
+        //atenção nesse bloco.
         Text(
-          medico.especialidade!.espc,
+        medico.categoria!.nomeCategoria!,
           style: const TextStyle(
             height: 1,
             color: Colors.white70,

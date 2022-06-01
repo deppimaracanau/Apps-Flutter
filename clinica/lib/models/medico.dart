@@ -140,4 +140,6 @@ class Medico {
       pacientes: 298,
     )
   ];
+
+  get categoria => null;
 }

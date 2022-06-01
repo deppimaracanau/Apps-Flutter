@@ -73,7 +73,7 @@ class Categoria extends StatelessWidget {
                     text: 'Medico ${categoria.medicos}\n',
                     children: [
                       TextSpan(
-                        text: 'Especialidae ${categoria.nomeEspecialidade}',
+                        text: 'Especialidade ${categoria.nomeEspecialidade}',
                       ),
                     ],
                   ),

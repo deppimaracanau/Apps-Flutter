@@ -29,8 +29,8 @@ class HomePageState extends State<HomePage> {
           //-----------------------------------
           //----Itens do topo do corpo
           //-----------------------------------
-          _BodyHome(
-            contentPadding: EdgeInsets.only(top: altura - 20),
+          Home(
+            espacamento: EdgeInsets.only(top: altura - 20),
           ),
           //-----------------------------------
           //----widget do topo do corpo
@@ -144,31 +144,31 @@ class HomePageState extends State<HomePage> {
   }
 }
 
-class _BodyHome extends StatelessWidget {
-  const _BodyHome({
+class Home extends StatelessWidget {
+  const Home({
     Key? key,
-    this.contentPadding,
+    this.espacamento,
   }) : super(key: key);
-  final EdgeInsetsGeometry? contentPadding;
+  final EdgeInsetsGeometry? espacamento;
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    final currentPatient = Paciente.pacienteAtual;
-    final sectionStyle = GoogleFonts.poppins(
+    final tamanho = MediaQuery.of(context).size;
+    final pacienteAtual = Paciente.pacienteAtual;
+    final estiloDaSecao = GoogleFonts.poppins(
       fontSize: 18,
       color: CorDoApp.cDarkTeal,
       fontWeight: FontWeight.w600,
     );
     return ListView(
-      padding: contentPadding,
+      padding: espacamento,
       physics: const BouncingScrollPhysics(),
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Text(
             'Especilidades',
-            style: sectionStyle,
+            style: estiloDaSecao,
           ),
         ),
         //------------------------------------------
@@ -180,11 +180,11 @@ class _BodyHome extends StatelessWidget {
           child: ListView.builder(
             itemExtent: MediaQuery.of(context).size.width * .4,
             scrollDirection: Axis.horizontal,
-            itemCount: Especialidade.categories.length,
+            itemCount: Especialidade.especialidades.length,
             physics: const BouncingScrollPhysics(),
             padding: const EdgeInsets.symmetric(horizontal: 20),
             itemBuilder: (context, index) {
-              final especialidade = Especialidade.categories[index];
+              final especialidade = Especialidade.especialidades[index];
               return Especialidade(especialidade: especialidade);
             },
           ),
@@ -193,8 +193,8 @@ class _BodyHome extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Text(
-            'Top doctors',
-            style: sectionStyle,
+            'Médicos',
+            style: estiloDaSecao,
           ),
         ),
         //---------------------------------
@@ -233,14 +233,14 @@ class _BodyHome extends StatelessWidget {
                 )
               ],
             ),
-            style: sectionStyle,
+            style: estiloDaSecao,
           ),
         ),
         //--------------------------------------------
         //------Quadro dos ultimos exames
         //--------------------------------------------
         SizedBox(
-          height: size.width * 1.1,
+          height: tamanho.width * 1.1,
           child: GridView.builder(
             physics: const NeverScrollableScrollPhysics(),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -250,7 +250,7 @@ class _BodyHome extends StatelessWidget {
               childAspectRatio: 10 / 4.5,
             ),
             padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-            itemCount: currentPatient.medicalChecks!.length,
+            itemCount: pacienteAtual.c!.length,
             itemBuilder: (context, index) {
               final checkup = currentPatient.medicalChecks![index];
               return MedicalCheckCard(medicalCheck: medicalCheck);

@@ -79,7 +79,7 @@ class CardCheckup extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
-              color: _getMedicalStateColor(checkupMedico.getTriagemMedica()),
+              color: getTriagemMedica(checkupMedico.getTriagemMedica()),
               borderRadius: const BorderRadius.only(
                 bottomRight: Radius.circular(10),
                 topLeft: Radius.circular(20),
@@ -107,12 +107,12 @@ class CardCheckup extends StatelessWidget {
   ///
   /// Returns:
   ///   A function that returns a color based on the triagemMedica parameter.
-  Color? getTriagemMedica(TriagemMedica triagemMedica) {
+  Color? getTriagemMedica(Diagnostico diagnostico) {
     return {
-      TriagemMedica.normal: Colors.lightGreenAccent[700],
-      TriagemMedica.alerta: Colors.amberAccent[700],
-      TriagemMedica.risco: Colors.redAccent[700],
-    }[TriagemMedica];
+      Diagnostico.normal: Colors.lightGreenAccent[700],
+      Diagnostico.alerta: Colors.amberAccent[700],
+      Diagnostico.risco: Colors.redAccent[700],
+    }[Diagnostico];
   }
 }
 

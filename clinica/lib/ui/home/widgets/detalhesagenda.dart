@@ -12,7 +12,7 @@ class DetalhesDaAgenda extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const  whiteSectionStyle = TextStyle(
+    const whiteSectionStyle = TextStyle(
       color: Colors.white,
       fontSize: 18,
       fontWeight: FontWeight.bold,
@@ -20,7 +20,7 @@ class DetalhesDaAgenda extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        const  Padding(
+        const Padding(
           padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
           child: Text(
             'Endereco da clinica',
@@ -28,14 +28,16 @@ class DetalhesDaAgenda extends StatelessWidget {
           ),
         ),
         //--------------------------------------
-        //------HOSPITAL ADDRESS CONTAINER
+        //------Endereço da clinica
         //--------------------------------------
         Container(
           margin: const EdgeInsets.symmetric(horizontal: 15),
           padding: const EdgeInsets.symmetric(horizontal: 20),
           height: 90,
           decoration: BoxDecoration(
-            color: Colors.white30, borderRadius: BorderRadius.circular(10),),
+            color: Colors.white30,
+            borderRadius: BorderRadius.circular(10),
+          ),
           child: Row(
             children: <Widget>[
               const Icon(
@@ -64,7 +66,7 @@ class DetalhesDaAgenda extends StatelessWidget {
           ),
         ),
         //--------------------------------------------------
-        //-----MEDICAL INDICATIONS LIST
+        //-----Recomendações médicas
         //--------------------------------------------------
         SizedBox(
           height: 90,
@@ -74,7 +76,7 @@ class DetalhesDaAgenda extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15),
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
-              final agenda1 = agenda.recomendacaoMedica![index];
+              final agenda = Agenda.recomendacaoMedica![index];
               return Container(
                 width: 180,
                 padding: const EdgeInsets.all(10),
@@ -90,7 +92,8 @@ class DetalhesDaAgenda extends StatelessWidget {
                       child: SvgPicture.asset(
                         RecomendacaoMedica.svgCaminho!,
                         color: Colors.white,
-                      ),),
+                      ),
+                    ),
                     const SizedBox(width: 5),
                     Expanded(
                       flex: 2,
@@ -100,7 +103,8 @@ class DetalhesDaAgenda extends StatelessWidget {
                         style: const TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 16,),
+                          fontSize: 16,
+                        ),
                       ),
                     )
                   ],
