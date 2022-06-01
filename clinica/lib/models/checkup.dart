@@ -15,7 +15,7 @@ class DiagnosticoMedico {
   final Checkup? check;
   final double? value;
 
-  String? getSvgPath() {
+  String? getSvgCaminho() {
     return {
       Checkup.glicose: 'assets/svg/medical/mc-glucose.svg',
       Checkup.peso: 'assets/svg/medical/mc-weight.svg',

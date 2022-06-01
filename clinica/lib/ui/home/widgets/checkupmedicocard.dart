@@ -1,24 +1,23 @@
 import 'package:clinica/cores/cordoapp.dart';
 import 'package:flutter/material.dart';
-import 'package:clinica/models/checkup.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../models/checkupmedico.dart';
+import '../../../models/checkup.dart';
 
 /// It's a card that shows the checkup values and the medical state
 
 class CardCheckup extends StatelessWidget {
   const CardCheckup({
     Key? key,
-    required this.checkupMedico,
+    required this.check,
   }) : super(key: key);
 
-  final CheckupMedico checkupMedico;
-  /// Creating a card with a shadow and a rounded border.
+  final DiagnosticoMedico check;
+
   @override
   Widget build(BuildContext context) {
+    /// It's a card that shows the checkup values and the medical state
     return Stack(
-
       children: [
         Container(
           padding: const EdgeInsets.all(8),
@@ -35,18 +34,18 @@ class CardCheckup extends StatelessWidget {
           child: Row(
             children: [
               Expanded(
-                child: SvgPicture.asset(checkupMedico.caminhoImagem!),
+                child: SvgPicture.asset(check.getSvgCaminho()!),
               ),
               const SizedBox(width: 5),
+              /// It's a column that shows the checkup values and the medical state
               Expanded(
                 flex: 2,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    /// Getting the enum value and showing it in the screen.
                     Text(
-                      checkupMedico.estatus.toString().split('.')[1],
+                      check.check.toString().split('.')[1],
                       overflow: TextOverflow.fade,
                       softWrap: false,
                       style: TextStyle(
@@ -54,10 +53,9 @@ class CardCheckup extends StatelessWidget {
                         color: Colors.grey[700],
                       ),
                     ),
-                    /// Showing the value of the checkup and the parameters.
                     Text(
-                      '${checkupMedico.informacao.toString()} '
-                          '${checkupMedico.getParamentros()}',
+                      '${check.value.toString()} '
+                          '${check.getParamentros()}',
                       overflow: TextOverflow.fade,
                       softWrap: false,
                       style: const TextStyle(
@@ -72,21 +70,21 @@ class CardCheckup extends StatelessWidget {
             ],
           ),
         ),
-        /// A widget that is positioned at the bottom right of the screen.
+        /// It's a container that shows the medical state of the checkup
         Positioned(
           bottom: 0,
           right: 0,
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
-              color: getTriagemMedica(checkupMedico.getTriagemMedica()),
+              color: getDiagnosticoCor(check.getDiagnostico()),
               borderRadius: const BorderRadius.only(
                 bottomRight: Radius.circular(10),
                 topLeft: Radius.circular(20),
               ),
             ),
             child: Text(
-              checkupMedico.getTriagemMedica().toString().split(".")[1],
+              check.getDiagnostico().toString().split(".")[1],
               style: const TextStyle(
                 color: Colors.white,
                 fontSize: 12,
@@ -99,20 +97,20 @@ class CardCheckup extends StatelessWidget {
     );
   }
 
-  /// It returns a color based on the triagemMedica value
+  /// It returns a color based on the DiagnosticoMedico enum.
   ///
   /// Args:
-  ///   triagemMedica (TriagemMedica): The enum value that will be used to determine
-  /// the color.
+  ///   diagnosticoMedico (DiagnosticoMedico): The enum value that you want to get
+  /// the color for.
   ///
   /// Returns:
-  ///   A function that returns a color based on the triagemMedica parameter.
-  Color? getTriagemMedica(Diagnostico diagnostico) {
+  ///   A map of DiagnosticoMedico to Color.
+  Color? getDiagnosticoCor(DiagnosticoMedico diagnosticoMedico) {
     return {
-      Diagnostico.normal: Colors.lightGreenAccent[700],
-      Diagnostico.alerta: Colors.amberAccent[700],
-      Diagnostico.risco: Colors.redAccent[700],
-    }[Diagnostico];
+      DiagnosticoMedico.normal: Colors.lightGreenAccent[700],
+      DiagnosticoMedico.alerta: Colors.amberAccent[700],
+      DiagnosticoMedico.atencao: Colors.redAccent[700],
+    }[DiagnosticoMedico];
   }
 }
 

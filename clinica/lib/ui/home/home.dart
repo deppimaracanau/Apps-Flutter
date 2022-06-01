@@ -252,8 +252,8 @@ class Home extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
             itemCount: pacienteAtual.c!.length,
             itemBuilder: (context, index) {
-              final checkup = currentPatient.medicalChecks![index];
-              return MedicalCheckCard(medicalCheck: medicalCheck);
+              final checkup = pacienteAtual.historicoDeconsulta![index];
+              return CardMedico(checkup: checkup);
             },
           ),
         )
