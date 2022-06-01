@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:clinica/cores/cordoapp.dart';
 
 class PaginaMedico extends StatelessWidget {
-  const PaginaMedico({Key? key}):super(key: key);
+  const PaginaMedico({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,8 @@ class PaginaMedico extends StatelessWidget {
                 colors: [CorDoApp.cBlue, CorDoApp.cDarkBlue],
                 end: Alignment.bottomCenter,
                 begin: Alignment.topCenter,
-              ),),
+              ),
+            ),
             child: SafeArea(
               child: Column(
                 children: [
@@ -30,16 +31,17 @@ class PaginaMedico extends StatelessWidget {
                         mainAxisSize: MainAxisSize.min,
                         children: const [
                           Text(
-                            "Find your doctor",
+                            'Procure um médico',
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
-                              fontSize: 22,),
+                              fontSize: 22,
+                            ),
                           ),
                           Text(
-                            "The best doctors catalog",
+                            'Catálogo de profissionais',
                             style:
-                            TextStyle(color: Colors.white70, fontSize: 16),
+                                TextStyle(color: Colors.white70, fontSize: 16),
                           ),
                         ],
                       ),

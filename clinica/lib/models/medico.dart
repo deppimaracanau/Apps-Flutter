@@ -32,7 +32,7 @@ class Medico {
     nome: 'Richard Smith',
     fotoCaminho:
     'https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    especialidade: Especialidade.CCardiologista,
+    especialidade: Especialidade.cCardiologista,
     comentarios: 120,
     pacientes: 310,
     curtidas: 220,
@@ -45,7 +45,7 @@ class Medico {
     nome: 'Liliana Mondragon',
     fotoCaminho:
     'https://images.unsplash.com/photo-1591604021695-0c69b7c05981?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    especialidade: Especialidade.CDermatologista,
+    especialidade: Especialidade.cDermatologista,
     comentarios: 120,
     pacientes: 310,
     curtidas: 220,
@@ -57,7 +57,7 @@ class Medico {
     nome: 'Julissa Towers',
     fotoCaminho:
     'https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    especialidade: Especialidade.CPediatra,
+    especialidade: Especialidade.cPediatra,
     comentarios: 120,
     pacientes: 310,
     curtidas: 220,
@@ -70,7 +70,7 @@ class Medico {
     nome: 'Edward Ghirca',
     fotoCaminho:
     'https://images.unsplash.com/photo-1580281658626-ee379f3cce93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    especialidade: Especialidade.COrtopedista,
+    especialidade: Especialidade.cOrtopedista,
     comentarios: 120,
     pacientes: 310,
     curtidas: 220,
@@ -82,7 +82,7 @@ class Medico {
     nome: 'Guido Mista',
     fotoCaminho:
     'https://images.unsplash.com/photo-1576669801775-ff43c5ab079d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-    especialidade: Especialidade.CCardiologista,
+    especialidade: Especialidade.cCardiologista,
     comentarios: 120,
     pacientes: 310,
     curtidas: 220,
@@ -91,10 +91,10 @@ class Medico {
     avaliacao: 4.5,
   );
 
-  static const listTopMedico = [
+  static const listaMedico = [
     Medico(
       nome: 'Iris Bohorquez',
-      especialidade: Especialidade.COrtopedista,
+      especialidade: Especialidade.cOrtopedista,
       comentarios: 203,
       fotoPng: 'https://pngimg.com/uploads/Medico/Medico_PNG16043.png',
       endereco: Endereco.brownwood,
@@ -105,7 +105,7 @@ class Medico {
     ),
     Medico(
       nome: 'Namor Scoutia',
-      especialidade: Especialidade.CUrologista,
+      especialidade: Especialidade.cUrologista,
       comentarios: 193,
       fotoPng:
       'http://www.pngall.com/wp-content/uploads/2018/05/Medico-Free-Download-PNG.png',
@@ -117,7 +117,7 @@ class Medico {
     ),
     Medico(
       nome: 'Alex Gospel',
-      especialidade: Especialidade.CCardiologista,
+      especialidade: Especialidade.cCardiologista,
       comentarios: 210,
       xpAnos: 2012,
       fotoPng:
@@ -129,7 +129,7 @@ class Medico {
     ),
     Medico(
       nome: 'Robert Peace',
-      especialidade: Especialidade.CEndocrinologista,
+      especialidade: Especialidade.cEndocrinologista,
       comentarios: 173,
       fotoPng:
       'http://www.pngall.com/wp-content/uploads/2018/05/Medico-PNG-File-Download-Free.png',

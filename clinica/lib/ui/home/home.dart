@@ -3,7 +3,6 @@ import 'package:clinica/models/medico.dart';
 import 'package:clinica/models/especialidade.dart';
 import 'package:clinica/models/paciente.dart';
 import 'package:clinica/ui/home/widgets/homewidiget.dart';
-import 'package:clinica/cores/cordoapp.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
@@ -28,21 +27,21 @@ class HomePageState extends State<HomePage> {
         fit: StackFit.expand,
         children: <Widget>[
           //-----------------------------------
-          //----BOTTOM BODY ITEMS
+          //----Itens do topo do corpo
           //-----------------------------------
           _BodyHome(
             contentPadding: EdgeInsets.only(top: altura - 20),
           ),
           //-----------------------------------
-          //----TOP BODY WIDGETS
+          //----widget do topo do corpo
           //-----------------------------------
           AnimatedPositioned(
-            duration: expandDuration,
+            duration: duracao,
             curve: Curves.fastOutSlowIn,
             top: 0,
             left: 0,
             right: 0,
-            height: expandAppointment ? altura + 280 : altura,
+            height: abrirAgenda ? altura + 280 : altura,
             child: CustomPaint(
               painter: Pintor(curveRadius: 30),
               child: Column(
@@ -50,7 +49,7 @@ class HomePageState extends State<HomePage> {
                 children: <Widget>[
                   const SizedBox(height: 10),
                   //---------------------------------------------
-                  //------SEARCH BUTTON AND USER IMAGE
+                  //------Botão de busca e imagem
                   //---------------------------------------------
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15),
@@ -68,34 +67,34 @@ class HomePageState extends State<HomePage> {
                     ),
                   ),
                   //----------------------------------
-                  //-----NEXT APPOINTMENT CARD
+                  //-----Card Próximo compromisso
                   //----------------------------------
-                  NextAppointmentCard(
-                    height: altura - 175,
-                    margin: const EdgeInsets.symmetric(horizontal: 15),
-                    mdAppointment: nextAppointment,
+                  ProximoCompromisso(
+                    altura: altura - 175,
+                    margem: const EdgeInsets.symmetric(horizontal: 15),
+                    agenda: proximoCompromisso,
                   ),
                   //--------------------------------
-                  //------NEXT APPOINTMENT DETAILS
+                  //------Detalhes do proximo compromisso
                   //--------------------------------
                   AnimatedSwitcher(
                     duration: kThemeAnimationDuration,
-                    child: showAppointmentDetails
+                    child: mostrarDetalhesAgenda
                         ? GestureDetector(
                       onVerticalDragUpdate: (details) {
                         if (details.primaryDelta! < -7) {
                           setState(() {
-                            showAppointmentDetails = false;
+                            mostrarDetalhesAgenda = false;
                           });
                           Future.delayed(kThemeAnimationDuration, () {
                             setState(() {
-                              expandAppointment = false;
+                              abrirAgenda = false;
                             });
                           });
                         }
                       },
-                      child: AppointmentDetails(
-                        mdAppointment: nextAppointment,
+                      child: DetalhesDaAgenda(
+                        agenda: proximoCompromisso,
                       ),
                     )
                         : const SizedBox(),
@@ -103,9 +102,9 @@ class HomePageState extends State<HomePage> {
                   const Spacer(),
                   Center(
                     child: IconButton(
-                      onPressed: () => _onTapExpandButton(expandDuration),
+                      onPressed: () => _onTapExpandButton(duracao),
                       icon: Icon(
-                        expandAppointment
+                        abrirAgenda
                             ? Icons.keyboard_arrow_up
                             : Icons.keyboard_arrow_down,
                         size: 30,
@@ -123,22 +122,22 @@ class HomePageState extends State<HomePage> {
   }
 
   void _onTapExpandButton(Duration animationDuration) {
-    if (expandAppointment) {
+    if (abrirAgenda) {
       setState(() {
-        showAppointmentDetails = !showAppointmentDetails;
+        mostrarDetalhesAgenda = !mostrarDetalhesAgenda;
       });
       Future.delayed(kThemeAnimationDuration, () {
         setState(() {
-          expandAppointment = showAppointmentDetails;
+          abrirAgenda = mostrarDetalhesAgenda;
         });
       });
     } else {
       setState(() {
-        expandAppointment = !expandAppointment;
+        abrirAgenda = !abrirAgenda;
       });
       Future.delayed(animationDuration, () {
         setState(() {
-          showAppointmentDetails = expandAppointment;
+          mostrarDetalhesAgenda = abrirAgenda;
         });
       });
     }
@@ -155,10 +154,10 @@ class _BodyHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final currentPatient = MedicalPatient.currentPatient;
+    final currentPatient = Paciente.pacienteAtual;
     final sectionStyle = GoogleFonts.poppins(
       fontSize: 18,
-      color: MdAppColors.kDarkTeal,
+      color: CorDoApp.cDarkTeal,
       fontWeight: FontWeight.w600,
     );
     return ListView(
@@ -168,12 +167,12 @@ class _BodyHome extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Text(
-            'Categories',
+            'Especilidades',
             style: sectionStyle,
           ),
         ),
         //------------------------------------------
-        //------CATEGORIES LIST
+        //------Lista de especialidades
         //------------------------------------------
         const SizedBox(height: 10),
         SizedBox(
@@ -181,12 +180,12 @@ class _BodyHome extends StatelessWidget {
           child: ListView.builder(
             itemExtent: MediaQuery.of(context).size.width * .4,
             scrollDirection: Axis.horizontal,
-            itemCount: DoctorCategory.categories.length,
+            itemCount: Especialidade.categories.length,
             physics: const BouncingScrollPhysics(),
             padding: const EdgeInsets.symmetric(horizontal: 20),
             itemBuilder: (context, index) {
-              final category = DoctorCategory.categories[index];
-              return CategoryCard(category: category);
+              final especialidade = Especialidade.categories[index];
+              return Especialidade(especialidade: especialidade);
             },
           ),
         ),
@@ -206,26 +205,26 @@ class _BodyHome extends StatelessWidget {
           child: ListView.builder(
             itemExtent: 320,
             physics: const BouncingScrollPhysics(),
-            itemCount: Doctor.listTopDoctor.length,
+            itemCount: Medico.listaMedico.length,
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.symmetric(horizontal: 15),
             itemBuilder: (context, index) {
-              final doctor = Doctor.listTopDoctor[index];
-              return TopDoctorCard(doctor: doctor);
+              final medico = Medico.listaMedico[index];
+              return Medico(medico: medico);
             },
           ),
         ),
         //--------------------------------------------
-        //------LAST MEDICAL CHECK
+        //------Ultimos exames
         //--------------------------------------------
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Text.rich(
             TextSpan(
-              text: 'Last medical check',
+              text: 'Ultimos check up',
               children: [
                 TextSpan(
-                  text: ' (2020 - Ago - 12)',
+                  text: ' (2022 - Ago - 12)',
                   style: TextStyle(
                     color: Colors.grey[400],
                     fontWeight: FontWeight.w700,
@@ -238,7 +237,7 @@ class _BodyHome extends StatelessWidget {
           ),
         ),
         //--------------------------------------------
-        //------LAST MEDICAL CHECK GRID
+        //------Quadro dos ultimos exames
         //--------------------------------------------
         SizedBox(
           height: size.width * 1.1,
@@ -253,7 +252,7 @@ class _BodyHome extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
             itemCount: currentPatient.medicalChecks!.length,
             itemBuilder: (context, index) {
-              final medicalCheck = currentPatient.medicalChecks![index];
+              final checkup = currentPatient.medicalChecks![index];
               return MedicalCheckCard(medicalCheck: medicalCheck);
             },
           ),

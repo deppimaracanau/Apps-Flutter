@@ -101,7 +101,7 @@ class _InformacaoMedico extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         //--------------------------------------------
-        //------NAME medico AND SPECIALIZATION
+        //------Nome e espcialidade
         //--------------------------------------------
         Text(
           'Dr. ${medico.nome}',
@@ -112,7 +112,7 @@ class _InformacaoMedico extends StatelessWidget {
           ),
         ),
         Text(
-          medico.especialidade!.especialidade!,
+          medico.especialidade!.espc,
           style: const TextStyle(
             height: 1,
             color: Colors.white70,
@@ -120,13 +120,13 @@ class _InformacaoMedico extends StatelessWidget {
         ),
         const Spacer(),
         //-----------------------------------------------
-        //-----INFORMATION
+        //-----Infos
         //-----------------------------------------------
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             //-------------------------------
-            //-----PATIENTS COUNT
+            //-----Numeros de pacientes
             //-------------------------------
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -145,7 +145,7 @@ class _InformacaoMedico extends StatelessWidget {
               ],
             ),
             //-------------------------------
-            //-----RATE
+            //-----Avaliação
             //-------------------------------
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,

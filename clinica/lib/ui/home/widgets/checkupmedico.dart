@@ -107,7 +107,7 @@ class CardCheckup extends StatelessWidget {
   ///
   /// Returns:
   ///   A function that returns a color based on the triagemMedica parameter.
-  Color? _getMedicalStateColor(TriagemMedica triagemMedica) {
+  Color? getTriagemMedica(TriagemMedica triagemMedica) {
     return {
       TriagemMedica.normal: Colors.lightGreenAccent[700],
       TriagemMedica.alerta: Colors.amberAccent[700],
