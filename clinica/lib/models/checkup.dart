@@ -7,7 +7,11 @@ enum Checkup {
   glicose,
   altura
 }
-enum Diagnostico { normal, alerta, atencao }
+enum Diagnostico {
+  normal,
+  alerta,
+  atencao
+}
 
 class DiagnosticoMedico {
   const DiagnosticoMedico({this.check, this.value});
@@ -15,15 +19,16 @@ class DiagnosticoMedico {
   final Checkup? check;
   final double? value;
 
+
   String? getSvgCaminho() {
     return {
-      Checkup.glicose: 'assets/svg/medical/mc-glucose.svg',
-      Checkup.peso: 'assets/svg/medical/mc-weight.svg',
-      Checkup.hemoglobina: 'assets/svg/medical/mc-hemoglobin.svg',
-      Checkup.pressao: 'assets/svg/medical/mc-blood-pressure.svg',
-      Checkup.eletrocardiograma: 'assets/svg/medical/mc-cardiogram.svg',
-      Checkup.colestterol: 'assets/svg/medical/mc-cholesterol.svg',
-      Checkup.altura: 'assets/svg/medical/mc-height.svg',
+      Checkup.glicose: 'assets/mc-glucose.svg',
+      Checkup.peso: 'assets/mc-weight.svg',
+      Checkup.hemoglobina: 'assets/mc-hemoglobin.svg',
+      Checkup.pressao: 'assets/mc-blood-pressure.svg',
+      Checkup.eletrocardiograma: 'assets/mc-cardiogram.svg',
+      Checkup.colestterol: 'assets/mc-cholesterol.svg',
+      Checkup.altura: 'assets/mc-height.svg',
     }[check!];
   }
 

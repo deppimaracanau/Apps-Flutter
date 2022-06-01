@@ -1,23 +1,23 @@
 import 'package:clinica/ui/home/widgets/homewidiget.dart';
+import 'package:clinica/ui/medicos/paginamedico.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:clinica/ui/medicos/medicos.dart';
 import 'package:clinica/ui/home/home.dart';
-import 'package:clinica/ui/widget/barradenavegacao.dart';
+import 'package:clinica/ui/widgets/barradenavegacao.dart';
 import 'package:clinica/cores/cordoapp.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
-  runApp(const ClinicaAppicalApp());
+  runApp(const ClinicaApp());
 }
 
-class ClinicaAppicalApp extends StatelessWidget {
-  const ClinicaAppicalApp({Key? key}) : super(key: key);
+class ClinicaApp extends StatelessWidget {
+  const ClinicaApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    //removida a ! instance
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
     });
@@ -25,9 +25,9 @@ class ClinicaAppicalApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.grey[50],
-        primaryColor: CorDoApp.kBlue,
-        primaryColorLight: CorDoApp.kLightBlue,
-        primaryColorDark: CorDoApp.kDarkBlue,
+        primaryColor: CorDoApp.cBlue,
+        primaryColorLight: CorDoApp.cLightBlue,
+        primaryColorDark: CorDoApp.cDarkBlue,
         textTheme: GoogleFonts.poppinsTextTheme(),
         visualDensity: VisualDensity.adaptivePlatformDensity,
         colorScheme: ColorScheme.fromSwatch().copyWith(
@@ -44,7 +44,7 @@ class _MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<_MainPage> {
-  int indiceDaPagina = 0;
+  int indexPage = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -55,33 +55,33 @@ class _MainPageState extends State<_MainPage> {
         child: AnimatedSwitcher(
           duration: kThemeAnimationDuration,
           child: const [
-            HomePage(),
-            Medico(),
+            Home(),
+            PaginaMedico(),
             Scaffold(body: Center(child: Text("History"))),
             Scaffold(body: Center(child: Text("Urgency"))),
-          ][indiceDaPagina],
+          ][indexPage],
         ),
       ),
       bottomNavigationBar: BarraDeNavegacao(
-        indiceAtual: indiceDaPagina,
+        indiceAtual: indexPage,
         onTap: (value) => setState(() {
-          indiceDaPagina = value;
+          indexPage = value;
         }),
-        itens: const [
-          ItemBarraDeNavegacao(
+        items: const [
+          ItemDaBarraDeNavegacao(
             rotulo: 'Home',
             selecaoIcon: Icons.home_rounded,
           ),
-          ItemBarraDeNavegacao(
-            rotulo: 'Doctors',
+          ItemDaBarraDeNavegacao(
+            rotulo: 'Médicos',
             selecaoIcon: FontAwesomeIcons.user,
             cores: Color(0xFF06F884),),
-          ItemBarraDeNavegacao(
-            rotulo: 'History',
+          ItemDaBarraDeNavegacao(
+            rotulo: 'Histórico',
             selecaoIcon: Icons.history,
             cores: Colors.purpleAccent,),
-          ItemBarraDeNavegacao(
-            rotulo: 'Urgency',
+          ItemDaBarraDeNavegacao(
+            rotulo: 'Urgência',
             selecaoIcon: Icons.notifications,
             cores: Colors.redAccent,),
         ],

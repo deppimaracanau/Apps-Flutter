@@ -105,11 +105,11 @@ class CardCheckup extends StatelessWidget {
   ///
   /// Returns:
   ///   A map of DiagnosticoMedico to Color.
-  Color? getDiagnosticoCor(DiagnosticoMedico diagnosticoMedico) {
+  Color? getDiagnosticoCor(Diagnostico diagnostico) {
     return {
-      DiagnosticoMedico.normal: Colors.lightGreenAccent[700],
-      DiagnosticoMedico.alerta: Colors.amberAccent[700],
-      DiagnosticoMedico.atencao: Colors.redAccent[700],
+      Diagnostico.normal: Colors.lightGreenAccent[700],
+      Diagnostico.alerta: Colors.amberAccent[700],
+      Diagnostico.atencao: Colors.redAccent[700],
     }[DiagnosticoMedico];
   }
 }

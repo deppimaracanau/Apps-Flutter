@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:clinica/cores/cordoapp.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -60,13 +59,13 @@ class BarraDeNavegacao extends StatelessWidget {
 class ItemDaBarraDeNavegacao {
   const ItemDaBarraDeNavegacao({
     required this.rotulo,
-    required this.selecaoDeIcon,
+    required this.selecaoIcon,
     this.nSelecaoDeIcon,
     this.cores,
   });
 
   final String rotulo;
-  final IconData selecaoDeIcon;
+  final IconData selecaoIcon;
   final IconData? nSelecaoDeIcon;
   final Color? cores;
 }
@@ -102,7 +101,7 @@ class BotaoBarraDeNavegacao extends StatelessWidget {
         child: Row(
           children: [
             Icon(
-              item!.selecaoDeIcon,
+              item!.selecaoIcon,
               color: color,
             ),
             const SizedBox(width: 5),

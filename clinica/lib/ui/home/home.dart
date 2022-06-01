@@ -185,7 +185,7 @@ class Home extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             itemBuilder: (context, index) {
               final especialidade = Especialidade.especialidades[index];
-              return Especialidade(especialidade: especialidade);
+              return especialidade(especialidade: especialidade);
             },
           ),
         ),
@@ -210,7 +210,7 @@ class Home extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15),
             itemBuilder: (context, index) {
               final medico = Medico.listaMedico[index];
-              return Medico(medico: medico);
+              return medico(medico: medico);
             },
           ),
         ),
@@ -250,10 +250,10 @@ class Home extends StatelessWidget {
               childAspectRatio: 10 / 4.5,
             ),
             padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-            itemCount: pacienteAtual.c!.length,
+            itemCount: pacienteAtual.historicoDeconsulta!.length,
             itemBuilder: (context, index) {
               final checkup = pacienteAtual.historicoDeconsulta![index];
-              return CardMedico(checkup: checkup);
+              return CardCheckup(check: checkup);
             },
           ),
         )
