@@ -1,3 +1,4 @@
+/// Exporting the files to be used in the main.dart file.
 export 'package:clinica/ui/home/painel/painel.dart';
 export 'package:clinica/cores/cordoapp.dart';
 export 'package:clinica/ui/home/widgets/detalhesagenda.dart';

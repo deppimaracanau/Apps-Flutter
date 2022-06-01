@@ -1,8 +1,10 @@
 import 'package:clinica/models/especialidade.dart';
 import 'package:clinica/models/endereco.dart';
 
+/// It creates a class called Medico.
 class Medico {
 
+  /// A constructor.
   const Medico({
     this.nome,
     this.especialidade,
@@ -16,6 +18,7 @@ class Medico {
     this.fotoCaminho,
   });
 
+  /// A constructor.
   final String? nome;
   final Especialidade? especialidade;
   final int? pacientes;
@@ -28,6 +31,7 @@ class Medico {
   final Endereco? endereco;
 
 
+  /// Creating a new instance of the class Medico.
   static const  drRichard = Medico(
     nome: 'Richard Smith',
     fotoCaminho:

@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 
+/// A class that contains all the icons that we need to use in our app.
 class ClincaIcons {
   ClincaIcons._();
 

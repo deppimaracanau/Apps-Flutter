@@ -73,6 +73,7 @@ class Especialidade {
     cores: 0xff993299,
     espc: 10,);
 
+  /// A list of all the specialties.
   static const especialidades = [
     cCardiologista,
     cPediatra,

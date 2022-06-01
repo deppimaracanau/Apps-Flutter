@@ -13,6 +13,7 @@ enum Diagnostico {
   atencao
 }
 
+/// It's a class that holds a checkup type and a value
 class DiagnosticoMedico {
   const DiagnosticoMedico({this.check, this.value});
 
@@ -32,6 +33,10 @@ class DiagnosticoMedico {
     }[check!];
   }
 
+  /// It returns the unit of measurement of the checkup type, if it exists
+  ///
+  /// Returns:
+  ///   A map with the values of the enum Checkup.
   String? getParamentros() {
     return {
       Checkup.glicose: 'g/dL',
@@ -44,6 +49,10 @@ class DiagnosticoMedico {
     }[check!];
   }
 
+  /// It returns a Diagnostico enum value based on the value of the check variable.
+  ///
+  /// Returns:
+  ///   A Diagnostico object.
   Diagnostico getDiagnostico() {
     switch (check) {
       case Checkup.peso:

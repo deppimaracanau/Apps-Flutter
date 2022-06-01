@@ -1,3 +1,4 @@
+/// It's a class that contains static methods that help us format dates
 class Calendario {
   static String formatToTextDate(DateTime date) {
     return "${date.year} ${months[date.month]} ${date.day}";
@@ -9,6 +10,7 @@ class Calendario {
     return "$hora${date.hour}:$minuto${date.minute} hr";
   }
 
+  /// A map of months in portuguese.
   static const months = {
     1: "Janeiro",
     2: "Fevereiro",

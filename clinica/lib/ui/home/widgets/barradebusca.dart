@@ -9,6 +9,16 @@ class Busca extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  /// It creates a search bar with a profile picture.
+  ///
+  /// Args:
+  ///   context (BuildContext): The context of the widget.
+  ///
+  /// Returns:
+  ///   A SafeArea with a Row with a Expanded with a SizedBox with a TextField with
+  /// a suffixIcon with a OutlineInputBorder with a BorderRadius with a BorderSide
+  /// with a hintStyle with a hintText with a SizedBox with a Container with a
+  /// DecorationImage with a CachedNetworkImageProvider.
   Widget build(BuildContext context) {
     const height = 45.0;
     /// Creating a search bar with a profile picture.

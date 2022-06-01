@@ -1,3 +1,4 @@
+/// A class that contains a list of medical recommendations.
 class RecomendacaoMedica {
   const RecomendacaoMedica._({
     this.svgCaminho,

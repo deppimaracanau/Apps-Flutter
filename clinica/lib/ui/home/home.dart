@@ -5,6 +5,9 @@ import 'package:clinica/models/paciente.dart';
 import 'package:clinica/ui/home/widgets/homewidiget.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+/// It's a list view with a fixed height, with a list of specialties, a list of
+/// doctors, a text with a date and a grid view with a fixed height
+/// `HomePage` is a `StatefulWidget` that creates a `HomePageState` when it's built
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -22,6 +25,11 @@ class HomePageState extends State<HomePage> {
     const duracao = Duration(milliseconds: 400);
     final altura = (size.width * .75).clamp(310.0, 340.0);
     final proximoCompromisso = Agenda.proximoCompromisso;
+
+    /// It's creating a widget with a fixed height, with a text with a date,
+    /// a text with a time, a text with a doctor's name, a text with a specialty
+    /// and a
+    /// text with a patient's name.
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,
@@ -35,6 +43,11 @@ class HomePageState extends State<HomePage> {
           //-----------------------------------
           //----widget do topo do corpo
           //-----------------------------------
+
+          /// It's creating a widget with a fixed height, with a text with a date,
+          /// a text with a time, a text with a doctor's name, a text with a
+          /// specialty and a
+          /// text with a patient's name.
           AnimatedPositioned(
             duration: duracao,
             curve: Curves.fastOutSlowIn,
@@ -44,6 +57,12 @@ class HomePageState extends State<HomePage> {
             height: abrirAgenda ? altura + 280 : altura,
             child: CustomPaint(
               painter: Pintor(curveRadius: 30),
+
+              /// It's creating a widget with a fixed height, with a text with a
+              /// date,
+              /// a text with a time, a text with a doctor's name, a text with a
+              /// specialty and a
+              /// text with a patient's name.
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -55,6 +74,8 @@ class HomePageState extends State<HomePage> {
                     padding: EdgeInsets.symmetric(horizontal: 15),
                     child: Busca(),
                   ),
+
+                  /// It's creating a text with a style.
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                     child: Text(
@@ -69,6 +90,11 @@ class HomePageState extends State<HomePage> {
                   //----------------------------------
                   //-----Card Próximo compromisso
                   //----------------------------------
+                  /// It's creating a widget with a fixed height, with a text with a
+                  /// date,
+                  /// a text with a time, a text with a doctor's name, a text with a
+                  /// specialty and a
+                  /// text with a patient's name.
                   ProximoCompromisso(
                     altura: altura - 175,
                     margem: const EdgeInsets.symmetric(horizontal: 15),
@@ -77,29 +103,34 @@ class HomePageState extends State<HomePage> {
                   //--------------------------------
                   //------Detalhes do proximo compromisso
                   //--------------------------------
+                  /// It's a widget that when pressed, it will open or close the
+                  /// agenda.
                   AnimatedSwitcher(
                     duration: kThemeAnimationDuration,
                     child: mostrarDetalhesAgenda
                         ? GestureDetector(
-                      onVerticalDragUpdate: (details) {
-                        if (details.primaryDelta! < -7) {
-                          setState(() {
-                            mostrarDetalhesAgenda = false;
-                          });
-                          Future.delayed(kThemeAnimationDuration, () {
-                            setState(() {
-                              abrirAgenda = false;
-                            });
-                          });
-                        }
-                      },
-                      child: DetalhesDaAgenda(
-                        agenda: proximoCompromisso,
-                      ),
-                    )
+                            onVerticalDragUpdate: (details) {
+                              if (details.primaryDelta! < -7) {
+                                setState(() {
+                                  mostrarDetalhesAgenda = false;
+                                });
+                                Future.delayed(kThemeAnimationDuration, () {
+                                  setState(() {
+                                    abrirAgenda = false;
+                                  });
+                                });
+                              }
+                            },
+                            child: DetalhesDaAgenda(
+                              agenda: proximoCompromisso,
+                            ),
+                          )
                         : const SizedBox(),
                   ),
                   const Spacer(),
+
+                  /// It's a button that when pressed, it will open or close the
+                  /// agenda.
                   Center(
                     child: IconButton(
                       onPressed: () => _onTapExpandButton(duracao),
@@ -121,6 +152,10 @@ class HomePageState extends State<HomePage> {
     );
   }
 
+  /// If the agenda is open, then close it, and if it's closed, then open it
+  ///
+  /// Args:
+  ///   animationDuration (Duration): The duration of the animation.
   void _onTapExpandButton(Duration animationDuration) {
     if (abrirAgenda) {
       setState(() {
@@ -144,6 +179,8 @@ class HomePageState extends State<HomePage> {
   }
 }
 
+/// It's a list view with a fixed height, with a list of specialties, a list of
+/// doctors, a text with a date and a grid view with a fixed height
 class Home extends StatelessWidget {
   const Home({
     Key? key,
@@ -160,6 +197,8 @@ class Home extends StatelessWidget {
       color: CorDoApp.cDarkTeal,
       fontWeight: FontWeight.w600,
     );
+
+    /// Creating a list view with a fixed height.
     return ListView(
       padding: espacamento,
       physics: const BouncingScrollPhysics(),
@@ -175,6 +214,8 @@ class Home extends StatelessWidget {
         //------Lista de especialidades
         //------------------------------------------
         const SizedBox(height: 10),
+
+        /// Creating a list of specialties.
         SizedBox(
           height: MediaQuery.of(context).size.width * .27,
           child: ListView.builder(
@@ -185,11 +226,13 @@ class Home extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             itemBuilder: (context, index) {
               final especialidade = Especialidade.especialidades[index];
-              return especialidade(especialidade: especialidade);
+              return Especialidade(especialidade: especialidade);
             },
           ),
         ),
         const SizedBox(height: 20),
+
+        /// Creating a text with a style.
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Text(
@@ -200,6 +243,7 @@ class Home extends StatelessWidget {
         //---------------------------------
         //------TOP DOCTORS LIST
         //---------------------------------
+        /// Creating a list of doctors.
         SizedBox(
           height: 180,
           child: ListView.builder(
@@ -217,6 +261,7 @@ class Home extends StatelessWidget {
         //--------------------------------------------
         //------Ultimos exames
         //--------------------------------------------
+        /// Creating a text with a date.
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Text.rich(
@@ -224,7 +269,7 @@ class Home extends StatelessWidget {
               text: 'Ultimos check up',
               children: [
                 TextSpan(
-                  text: ' (2022 - Ago - 12)',
+                  text: '{$DateTime.now()}',
                   style: TextStyle(
                     color: Colors.grey[400],
                     fontWeight: FontWeight.w700,
@@ -239,6 +284,7 @@ class Home extends StatelessWidget {
         //--------------------------------------------
         //------Quadro dos ultimos exames
         //--------------------------------------------
+        /// Creating a grid view with a fixed height.
         SizedBox(
           height: tamanho.width * 1.1,
           child: GridView.builder(

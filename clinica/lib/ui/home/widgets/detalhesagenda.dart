@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:clinica/models/agenda.dart';
 import 'package:flutter_svg/svg.dart';
 
+/// It's a `Column` widget that has a `Text` widget, a `Container` widget, another
+/// `Text` widget, and a `SizedBox` widget inside it
 class DetalhesDaAgenda extends StatelessWidget {
   const DetalhesDaAgenda({
     Key? key,
@@ -29,6 +31,7 @@ class DetalhesDaAgenda extends StatelessWidget {
         //--------------------------------------
         //------Endereco da clinica
         //--------------------------------------
+        /// A container with a row inside it.
         Container(
           margin: const EdgeInsets.symmetric(horizontal: 15),
           padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -55,6 +58,7 @@ class DetalhesDaAgenda extends StatelessWidget {
             ],
           ),
         ),
+        /// A padding widget with a text widget inside it.
         const Padding(
           padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
           child: Text(
@@ -65,6 +69,7 @@ class DetalhesDaAgenda extends StatelessWidget {
         //--------------------------------------------------
         //-----Lista de recomendacao medica
         //--------------------------------------------------
+        /// A `ListView` widget that is inside a `SizedBox` widget.
         SizedBox(
           height: 90,
           child: ListView.builder(

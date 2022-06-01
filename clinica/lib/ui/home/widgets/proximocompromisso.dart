@@ -4,6 +4,8 @@ import 'package:clinica/models/agenda.dart';
 import 'package:clinica/cores/cordoapp.dart';
 import 'package:clinica/cores/calendario.dart';
 
+/// It returns a container with a stack of widgets, which contains a row with two
+/// widgets, which contains a column with a text widget and a row with three widgets
 class ProximoCompromisso extends StatelessWidget{
   const ProximoCompromisso({
    Key? key,
@@ -18,6 +20,7 @@ class ProximoCompromisso extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     final medico = agenda.medico!;
+    /// Creating a container with a stack of widgets.
     return Container(
       width: double.infinity,
       height: altura,
@@ -29,11 +32,13 @@ class ProximoCompromisso extends StatelessWidget{
       ),
       child: Stack(
         children: [
+          /// Creating a row with two widgets.
           Row(
             children: [
               //---------------------------
               //-----ICON CARD
               //---------------------------
+              /// A widget that expands its child to fill the available space.
               Expanded(
                 flex: 6,
                 child: Container(
@@ -70,6 +75,7 @@ class ProximoCompromisso extends StatelessWidget{
               //------------------------------
               //-----APPOINTMENT INFORMATION
               //------------------------------
+              /// A column with a text widget and a row with three widgets.
               Expanded(
                 flex: 10,
                 child: Column(
@@ -84,6 +90,7 @@ class ProximoCompromisso extends StatelessWidget{
                     //-------------------------------
                     //-----NAME AND PHOTO DOCTOR
                     //-------------------------------
+                    /// Creating a row with three widgets.
                     Row(
                       children: [
                         _buildTextRich(
@@ -115,6 +122,7 @@ class ProximoCompromisso extends StatelessWidget{
           //-----------------------------
           //-----HOUR DATE
           //-----------------------------
+          /// A widget that is positioned at the top right of the screen.
           Positioned(
             top: 0,
             right: 0,
@@ -139,6 +147,14 @@ class ProximoCompromisso extends StatelessWidget{
     );
   }
 
+  /// It returns a Text widget with a title and a subtitle.
+  ///
+  /// Args:
+  ///   title (String): The title of the card.
+  ///   subtitle (String): The text to be displayed in the subtitle.
+  ///
+  /// Returns:
+  ///   A Text widget with a TextSpan as its data.
   Text _buildTextRich({String? title, String? subtitle}) {
     return Text.rich(
       TextSpan(

@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+/// It's a class that contains static constants that represent colors
 class CorDoApp {
   static const cLightCyan = Color(0xff9ae2e6);
   static const cDarkTeal = Color(0xff527c88);

@@ -3,6 +3,7 @@ import 'package:clinica/models/checkup.dart';
 export 'agenda.dart';
 export 'checkup.dart';
 
+/// It's a class that contains all the information about a patient
 class Paciente {
   const Paciente({
     this.nome,
@@ -24,6 +25,7 @@ class Paciente {
   final List<Agenda>? historicoDeconsulta;
   final Agenda? proximaConsulta;
 
+  /// A static final variable that is a Paciente object.
   static final pacienteAtual = Paciente(
     nome: 'Kevin',
     sobrenome: 'Melendez',

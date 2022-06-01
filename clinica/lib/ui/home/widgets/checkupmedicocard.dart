@@ -5,7 +5,6 @@ import 'package:flutter_svg/svg.dart';
 import '../../../models/checkup.dart';
 
 /// It's a card that shows the checkup values and the medical state
-
 class CardCheckup extends StatelessWidget {
   const CardCheckup({
     Key? key,
@@ -15,10 +14,18 @@ class CardCheckup extends StatelessWidget {
   final DiagnosticoMedico check;
 
   @override
+  /// It's a card that shows the checkup values and the medical state
+  ///
+  /// Args:
+  ///   context (BuildContext): The context of the widget.
+  ///
+  /// Returns:
+  ///   A card that shows the checkup values and the medical state
   Widget build(BuildContext context) {
     /// It's a card that shows the checkup values and the medical state
     return Stack(
       children: [
+        /// It's a card that shows the checkup values and the medical state
         Container(
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
@@ -31,6 +38,7 @@ class CardCheckup extends StatelessWidget {
                 offset: const Offset(-3, 3),),
             ],
           ),
+          /// It's a row that shows the checkup values and the medical state
           child: Row(
             children: [
               Expanded(

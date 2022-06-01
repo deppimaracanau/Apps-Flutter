@@ -7,6 +7,13 @@ class Pintor extends CustomPainter  {
   final double curveRadius;
 
   @override
+  /// > We create a path that starts at the top left corner of the screen, goes down
+  /// to the bottom left corner, then goes up to the bottom right corner, then goes
+  /// up to the top right corner, and then goes back to the top left corner
+  ///
+  /// Args:
+  ///   canvas (Canvas): The canvas on which you can draw.
+  ///   size (Size): The size of the canvas.
   void paint(Canvas canvas, Size size) {
     final pintor = Paint()
       ..shader = const LinearGradient(

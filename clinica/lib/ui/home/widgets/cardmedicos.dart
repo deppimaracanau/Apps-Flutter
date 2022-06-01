@@ -6,6 +6,7 @@ import 'package:clinica/cores/cordoapp.dart';
 
 import '../../../models/especialidade.dart';
 
+/// It creates a stack with two widgets
 class CardMedico extends StatelessWidget {
   const CardMedico({
     Key? key,
@@ -16,7 +17,15 @@ class CardMedico extends StatelessWidget {
   final Especialidade categoria;
 
   @override
+  /// It creates a stack with two widgets
+  ///
+  /// Args:
+  ///   context (BuildContext): The context of the widget.
+  ///
+  /// Returns:
+  ///   A stack with two widgets.
   Widget build(BuildContext context) {
+    /// It creates a stack with two widgets.
     return Stack(
       children: <Widget>[
         //--------------------------------------------
@@ -34,6 +43,8 @@ class CardMedico extends StatelessWidget {
                 //----------------------------------
                 //-----Fundo azul
                 //---------------------------------
+                /// It creates a container with a gradient background and a border
+                /// radius.
                 Container(
                   width: 280,
                   margin: const EdgeInsets.only(top: 40),
@@ -56,6 +67,8 @@ class CardMedico extends StatelessWidget {
                 //-----------------------------
                 //------imagem
                 //-----------------------------
+                /// Creating a widget that will be positioned at the bottom of the
+                /// screen.
                 Positioned(
                   bottom: 0,
                   child: ClipRRect(
@@ -84,6 +97,7 @@ class CardMedico extends StatelessWidget {
   }
 }
 
+/// It creates a column with three widgets
 class _InformacaoMedico extends StatelessWidget {
   const _InformacaoMedico({
     Key? key,
@@ -93,6 +107,13 @@ class _InformacaoMedico extends StatelessWidget {
   final Medico medico;
 
   @override
+  /// It creates a column with three widgets
+  ///
+  /// Args:
+  ///   context (BuildContext): The context of the widget.
+  ///
+  /// Returns:
+  ///   A column with three widgets.
   Widget build(BuildContext context) {
     final countTextStyle = TextStyle(
       color: Colors.white.withOpacity(.8),
@@ -100,6 +121,7 @@ class _InformacaoMedico extends StatelessWidget {
       height: 1,
     );
 
+    /// It creates a column with three widgets.
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -126,12 +148,14 @@ class _InformacaoMedico extends StatelessWidget {
         //-----------------------------------------------
         //-----Infos
         //-----------------------------------------------
+        /// It creates a row with three widgets.
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             //-------------------------------
             //-----Numeros de pacientes
             //-------------------------------
+            /// It creates a column with two widgets.
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
@@ -151,6 +175,7 @@ class _InformacaoMedico extends StatelessWidget {
             //-------------------------------
             //-----Avaliação
             //-------------------------------
+            /// It creates a row with two widgets.
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
@@ -161,6 +186,7 @@ class _InformacaoMedico extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
+                /// Creating a row with two widgets.
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: <Widget>[
@@ -184,6 +210,7 @@ class _InformacaoMedico extends StatelessWidget {
   }
 }
 
+/// It creates a row with three widgets
 class _FundoBranco extends StatelessWidget {
   const _FundoBranco({
     Key? key,
@@ -192,6 +219,13 @@ class _FundoBranco extends StatelessWidget {
   final Medico medico;
 
   @override
+  /// It creates a row with three widgets.
+  ///
+  /// Args:
+  ///   context (BuildContext): The BuildContext of the parent widget.
+  ///
+  /// Returns:
+  ///   A Container with a Row inside.
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.bottomCenter,
@@ -208,6 +242,7 @@ class _FundoBranco extends StatelessWidget {
           )
         ],
       ),
+      /// Creating a row with three widgets.
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -234,6 +269,7 @@ class _FundoBranco extends StatelessWidget {
     required IconData iconData,
     VoidCallback? onTap,
   }) {
+    /// A function that returns a row with an icon, a space and a text.
     return Row(
       children: [
         Icon(

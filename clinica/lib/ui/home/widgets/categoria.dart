@@ -4,6 +4,7 @@ import 'package:clinica/models/especialidade.dart';
 
 import '../../../models/especialidade.dart';
 
+/// A widget that is a container that has a child that is a stack
 class Categoria extends StatelessWidget {
   const Categoria({
     Key? key,
@@ -15,7 +16,13 @@ class Categoria extends StatelessWidget {
   final Especialidade nomeCategoria;
 
   @override
+  /// A function that returns a widget.
+  ///
+  /// Args:
+  ///   context (BuildContext): The context is used to access the theme and
+  /// localizations of the app.
   Widget build(BuildContext context) {
+    /// A widget that is a container that has a child that is a stack.
     return Container(
       clipBehavior: Clip.antiAlias,
       margin: const EdgeInsets.only(right: 20),
@@ -33,6 +40,7 @@ class Categoria extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
+          /// A widget that controls where a child of a Stack is positioned.
           Positioned(
             left: -30,
             bottom: -20,
@@ -50,6 +58,7 @@ class Categoria extends StatelessWidget {
               ),
             ),
           ),
+          /// A widget that adds padding to its child.
           Padding(
             padding: const EdgeInsets.all(10),
             child: Column(
