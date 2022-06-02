@@ -1,6 +1,7 @@
 import 'package:clinica/ui/home/widgets/homewidiget.dart';
 import 'package:clinica/ui/medicos/paginamedico.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:clinica/ui/home/home.dart';
 import 'package:clinica/ui/widgets/barradenavegacao.dart';
@@ -17,8 +18,8 @@ class ClinicaApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //removida a ! instance
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    //removida  WidgetsBinding  trocado por SchedulerBinding
+    SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
       SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
     });
     return MaterialApp(

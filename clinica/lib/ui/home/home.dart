@@ -255,7 +255,7 @@ class Home extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15),
             itemBuilder: (context, index) {
               final medico = Medico.listaMedico[index];
-              return Medico(medico: medico);
+              return CardMedico(medico: medico);
             },
           ),
         ),
@@ -297,10 +297,10 @@ class Home extends StatelessWidget {
               childAspectRatio: 10 / 4.5,
             ),
             padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-            itemCount: pacienteAtual.historicoDeconsulta!.length,
+            itemCount: pacienteAtual.historicoMedico!.length,
             itemBuilder: (context, index) {
-              final checkup = pacienteAtual.historicoDeconsulta![index];
-              return CardCheckup(check: checkup);
+              final check = pacienteAtual.historicoMedico![index];
+              return CardCheckup(check: check);
             },
           ),
         )
