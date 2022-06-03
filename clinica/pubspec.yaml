@@ -36,12 +36,15 @@ dependencies:
   cupertino_icons: ^1.0.4
   font_awesome_flutter: ^10.1.0
   google_fonts: ^3.0.1
+  flutter_vector_icons: ^1.0.0
+  flutter_staggered_grid_view: ^0.6.1
   flutter_svg: ^1.1.0
   cached_network_image: ^3.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  very_good_analysis: 2.4.0
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -61,6 +64,31 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  assets:
+    - assets/agua.svg
+    - assets/alcool.svg
+    - assets/altura.svg
+    - assets/cafe.svg
+    - assets/colesterol.svg
+    - assets/eletrocardiograma.svg
+    - assets/exercicios.svg
+    - assets/fastfood.svg
+    - assets/glicose.svg
+    - assets/peso.svg
+    - assets/pressao.svg
+    - assets/hemoglobina.svg
+    - assets/vegetais.svg
+    - assets/arm.jpg
+    - assets/weight.jpg
+    - assets/brain.png
+    - assets/cholesterol.jpg
+    - assets/diabetes-test.png
+    - assets/lungs.png
+
+  fonts:
+    - family: MDIcons
+      fonts:
+        - asset: assets/MdIcons.ttf
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

@@ -179,7 +179,7 @@ class _InformacaoMedico extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  'Taxa',
+                  'Avaliação',
                   style: TextStyle(
                     color: Colors.white.withOpacity(.8),
                     fontWeight: FontWeight.w500,
@@ -226,39 +226,45 @@ class _FundoBranco extends StatelessWidget {
   /// Returns:
   ///   A Container with a Row inside.
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.bottomCenter,
-      margin: const EdgeInsets.fromLTRB(10, 70, 10, 20),
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(15),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(.2),
-            blurRadius: 20,
-            offset: const Offset(-5, 5),
-          )
-        ],
-      ),
-      /// Creating a row with three widgets.
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          _buildIconButton(
-            iconData: Icons.favorite,
-            label: "${medico.curtidas} Curtidas",
+    return Flexible(
+      child: Container(
+        alignment: Alignment.bottomCenter,
+        margin: const EdgeInsets.fromLTRB(10, 70, 10, 20),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
+        decoration: BoxDecoration(
+          color: Colors.white70,
+          borderRadius: BorderRadius.circular(15),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(.2),
+              blurRadius: 20,
+              offset: const Offset(-5, 5),
+            )
+          ],
+        ),
+        /// Creating a row with three widgets.
+        //inseridos os paramentros abaixo SingleChildScrollView e scrollDirection para evitar o estouro de area
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              _buildIconButton(
+                iconData: Icons.favorite,
+                label: "${medico.curtidas} Curtidas",
+              ),
+              _buildIconButton(
+                iconData: Icons.comment,
+                label: "${medico.comentarios} Comentários",
+              ),
+              _buildIconButton(
+                iconData: Icons.send,
+                label: "Mensagens",
+                onTap: () {},
+              ),
+            ],
           ),
-          _buildIconButton(
-            iconData: Icons.comment,
-            label: "${medico.comentarios} Comentários",
-          ),
-          _buildIconButton(
-            iconData: Icons.send,
-            label: "Message",
-            onTap: () {},
-          ),
-        ],
+        ),
       ),
     );
   }

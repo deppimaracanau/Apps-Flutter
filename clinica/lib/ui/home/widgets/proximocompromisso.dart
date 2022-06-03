@@ -36,7 +36,7 @@ class ProximoCompromisso extends StatelessWidget{
           Row(
             children: [
               //---------------------------
-              //-----ICON CARD
+              //-----Icon card
               //---------------------------
               /// A widget that expands its child to fill the available space.
               Expanded(
@@ -73,7 +73,7 @@ class ProximoCompromisso extends StatelessWidget{
                 ),
               ),
               //------------------------------
-              //-----APPOINTMENT INFORMATION
+              //-----Informação da agenda
               //------------------------------
               /// A column with a text widget and a row with three widgets.
               Expanded(
@@ -83,7 +83,7 @@ class ProximoCompromisso extends StatelessWidget{
                   children: [
                     const SizedBox(height: 10),
                     _buildTextRich(
-                      title: "Date",
+                      title: "Data",
                       subtitle: Calendario.formatToTextDate(agenda.data!),
                     ),
                     const Spacer(),
@@ -120,7 +120,7 @@ class ProximoCompromisso extends StatelessWidget{
             ],
           ),
           //-----------------------------
-          //-----HOUR DATE
+          //-----Data e Hora
           //-----------------------------
           /// A widget that is positioned at the top right of the screen.
           Positioned(

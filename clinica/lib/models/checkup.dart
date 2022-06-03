@@ -23,13 +23,13 @@ class DiagnosticoMedico {
 
   String? getSvgCaminho() {
     return {
-      Checkup.glicose: 'assets/mc-glucose.svg',
-      Checkup.peso: 'assets/mc-weight.svg',
-      Checkup.hemoglobina: 'assets/mc-hemoglobin.svg',
-      Checkup.pressao: 'assets/mc-blood-pressure.svg',
-      Checkup.eletrocardiograma: 'assets/mc-cardiogram.svg',
-      Checkup.colestterol: 'assets/mc-cholesterol.svg',
-      Checkup.altura: 'assets/mc-height.svg',
+      Checkup.glicose: 'assets/glicose.svg',
+      Checkup.peso: 'assets/peso.svg',
+      Checkup.hemoglobina: 'assets/hemoglobina.svg',
+      Checkup.pressao: 'assets/pressao.svg',
+      Checkup.eletrocardiograma: 'assets/eletrocardiograma.svg',
+      Checkup.colestterol: 'assets/colesterol.svg',
+      Checkup.altura: 'assets/altura.svg',
     }[check!];
   }
 

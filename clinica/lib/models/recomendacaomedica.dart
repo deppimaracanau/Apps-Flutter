@@ -13,25 +13,25 @@ class RecomendacaoMedica {
    static const cSemAlcool = RecomendacaoMedica._(
     titulo: "Sem alcool",
     descricao: "não consuma bebidas alcólicas",
-    svgCaminho: 'assets/mi-no-drinking.svg',);
+    svgCaminho: 'assets/alcool.svg',);
   static const cBeberAgua = RecomendacaoMedica._(
     titulo: "Beba bastante água",
     descricao: 'Beba mais água',
-    svgCaminho: 'assets/mi-drink-water.svg',);
+    svgCaminho: 'assets/agua.svg',);
   static const cSemFastfood = RecomendacaoMedica._(
     titulo: "Sem junkfood",
     descricao: "Don't eat fast food",
-    svgCaminho: 'assets/mi-no-fast-food.svg',);
+    svgCaminho: 'assets/fastfood.svg',);
   static const cComaVegetais = RecomendacaoMedica._(
     titulo: "Faça dieta",
     descricao: 'Coma masi verduras,legumes e frutas',
-    svgCaminho: 'assets/mi-eat-vegatables.svg',);
+    svgCaminho: 'assets/vegetais.svg',);
   static const cSemCafe = RecomendacaoMedica._(
     titulo: "Evite beber café",
     descricao: "Faça uso moderado de cafeína",
-    svgCaminho: 'assets/mi-no-coffee.svg',);
+    svgCaminho: 'assets/cafe.svg',);
   static const cFacaExercicios = RecomendacaoMedica._(
     titulo: "Faça exercicios",
     descricao: "Faça exercicios pelo menos 3x por semana",
-    svgCaminho: 'assets/mi-make-exercise.svg',);
+    svgCaminho: 'assets/exercicios.svg',);
 }

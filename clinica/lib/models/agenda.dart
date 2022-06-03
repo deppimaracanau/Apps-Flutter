@@ -24,28 +24,28 @@ class Agenda {
   ];
 
   static final proximoCompromisso = Agenda(
-    titulo: 'Heart care',
+    titulo: 'Avaliação cardiaca',
     data: DateTime.now().add(const Duration(days: 30)),
     medico: Medico.drRichard,
     recomendacaoMedica: _listaRecomendacao,
   );
 
   static final compromissoCuidadosPele = Agenda(
-    titulo: 'Skin care',
+    titulo: 'Cuidados com a pele',
     data: DateTime.now().subtract(const Duration(days: 10)),
     medico: Medico.drLiliana,
     recomendacaoMedica: _listaRecomendacao,
   );
 
   static final compromissoSutura = Agenda(
-    titulo: 'Suture revision',
+    titulo: 'Revisão de cirurgia',
     data: DateTime.now().subtract(const Duration(days: 30)),
     medico: Medico.drEdward,
     recomendacaoMedica: _listaRecomendacao,
   );
 
   static final compromissoFilho = Agenda(
-    titulo: 'Kid Vaccine',
+    titulo: 'Vacina infatil',
     data: DateTime.now().subtract(const Duration(days: 50)),
     medico: Medico.drJulissa,
     recomendacaoMedica: _listaRecomendacao,

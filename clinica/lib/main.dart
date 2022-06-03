@@ -18,7 +18,7 @@ class ClinicaApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //removida  WidgetsBinding  trocado por SchedulerBinding
+    //removido  WidgetsBinding  trocado por SchedulerBinding
     SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
       SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
     });
@@ -35,16 +35,16 @@ class ClinicaApp extends StatelessWidget {
           secondary: Colors.pinkAccent,
         ),
       ),
-      home: _MainPage(),);
+      home: _PaginaPrincipal(),);
   }
 }
 
-class _MainPage extends StatefulWidget {
+class _PaginaPrincipal extends StatefulWidget {
   @override
-  _MainPageState createState() => _MainPageState();
+  _PaginaPrincipalState createState() => _PaginaPrincipalState();
 }
 
-class _MainPageState extends State<_MainPage> {
+class _PaginaPrincipalState extends State<_PaginaPrincipal> {
   int indexPage = 0;
 
   @override
@@ -58,8 +58,8 @@ class _MainPageState extends State<_MainPage> {
           child: const [
             Home(),
             PaginaMedico(),
-            Scaffold(body: Center(child: Text("History"))),
-            Scaffold(body: Center(child: Text("Urgency"))),
+            Scaffold(body: Center(child: Text('Historico'))),
+            Scaffold(body: Center(child: Text('Urgência'))),
           ][indexPage],
         ),
       ),
