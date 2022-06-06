@@ -13,13 +13,13 @@ Future<void> main() async {
   await FlutterDownloader.initialize(
       debug: true // optional: set false to disable printing logs to console
       );
-  runApp(const MyApp());
+  runApp(const Estagio());
 }
 
 var link = ListDados.getData;
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class Estagio extends StatelessWidget {
+  const Estagio({Key? key}) : super(key: key);
 
   void initState() {}
 
@@ -35,21 +35,26 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const Estagio(title: 'App para baixar documentos do estágio'),
+      home: const Estagioapp(
+        title: 'App para baixar documentos do estágio',
+      ),
     );
   }
 }
 
-class Estagio extends StatefulWidget {
-  const Estagio({Key? key, required this.title}) : super(key: key);
+/// `Estagio` is a `StatefulWidget` that takes a `title` and creates a
+/// `_EstagioState` to manage its state
+class Estagioapp extends StatefulWidget {
+  const Estagioapp({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
-  State<Estagio> createState() => _EstagioState();
+  State<Estagioapp> createState() => _EstagioappState();
 }
 
 //teste
-class _EstagioState extends State<Estagio> {
+/// We register a port with the name "downloading" and listen to it for messages
+class _EstagioappState extends State<Estagioapp> {
   int progress = 0;
   final ReceivePort _receivePort = ReceivePort();
 
@@ -60,6 +65,8 @@ class _EstagioState extends State<Estagio> {
   }
 
   @override
+
+  /// > We register a port with the name "downloading" and listen to it for messages
   void initState() {
     super.initState();
 
@@ -82,14 +89,14 @@ class _EstagioState extends State<Estagio> {
   @override
   Widget build(BuildContext context) {
     final topPadding = MediaQuery.of(context).padding.top;
-
     return Container(
-
+      /// The above code is creating a list of cards that are being populated by
+      /// the data from the link.dart file.
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [
             Color.fromARGB(145, 131, 222, 1),
-            Color.fromARGB(160, 148, 227, 1),
+            Color.fromARGB(220, 220, 220, 1),
           ],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
@@ -99,7 +106,6 @@ class _EstagioState extends State<Estagio> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: SizedBox(
-
           width: double.infinity,
           child: Column(
             children: [
@@ -116,10 +122,8 @@ class _EstagioState extends State<Estagio> {
               ),
 
               const AnimatedImage(),
-              Container(
-                
-              ),//<= chamando a animação
-
+              Container(), //<= chamando a animação
+              /// The above code is creating a list of cards.
               Expanded(
                 child: ListView.builder(
                   //scrollDirection: Axis.horizontal,
@@ -139,6 +143,9 @@ class _EstagioState extends State<Estagio> {
                             ),
                             color: Colors.white38,
                           ),
+
+                          /// This is a widget that is being used to create a list
+                          /// of cards.
                           child: Padding(
                             padding: const EdgeInsets.all(7),
                             child: Stack(children: <Widget>[
@@ -182,16 +189,22 @@ class _EstagioState extends State<Estagio> {
               ),
             ],
           ),
-
         ),
       ),
     );
   }
 }
 
-
 //avatar
 
+/// `return` a `CircleAvatar` with a `radius` of `60.0` and a `backgroundImage` of
+/// `AssetImage('${data['name']}')`
+///
+/// Args:
+///   data: The data that is passed to the widget.
+///
+/// Returns:
+///   A widget that displays an image.
 Widget avatar(data) {
   return Align(
     alignment: Alignment.topLeft,
@@ -205,6 +218,14 @@ Widget avatar(data) {
 
 //bloco do texto dentro dos cards
 
+/// It returns an Align widget that contains a RichText widget that contains a
+/// TextSpan widget that contains a TextSpan widget that contains a TextSpan widget
+///
+/// Args:
+///   data: A Map with the following keys:
+///
+/// Returns:
+///   A widget that is aligned to the top right of the screen.
 Widget nameChange(data) {
   return Align(
     alignment: Alignment.topRight,
@@ -212,7 +233,7 @@ Widget nameChange(data) {
       text: TextSpan(
         text: '${data['subtitulo']}',
         style: const TextStyle(
-            fontFamily: 'Source Code Pro',
+            fontFamily: 'SourceSansPro-Regular',
             fontWeight: FontWeight.bold,
             color: Colors.blueGrey,
             fontSize: 17),
@@ -234,6 +255,15 @@ Widget nameChange(data) {
 
 //bloco do texto e link para download do documentos
 
+/// It's a function that returns a widget that aligns a widget to the left, and then
+/// adds padding to the left of the widget, and then adds a row of widgets, and then
+/// adds a button that downloads a file from a link
+///
+/// Args:
+///   data: The data that will be used to fill the card.
+///
+/// Returns:
+///   A widget that is aligned to the left and has a button that downloads a file.
 Widget textSide(data) {
   return Align(
     alignment: Alignment.centerLeft,
@@ -277,6 +307,7 @@ Widget textSide(data) {
 
 //bloco de animação
 
+/// `AnimatedImage` is a stateful widget that displays an animated image
 class AnimatedImage extends StatefulWidget {
   const AnimatedImage({Key? key}) : super(key: key);
 
@@ -284,6 +315,9 @@ class AnimatedImage extends StatefulWidget {
   AnimatedImageState createState() => AnimatedImageState();
 }
 
+/// `AnimatedImageState` is a `State` class that uses
+/// `SingleTickerProviderStateMixin` to provide a `Ticker` for the
+/// `AnimationController` that is used to animate the `Image` widget
 class AnimatedImageState extends State<AnimatedImage>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
