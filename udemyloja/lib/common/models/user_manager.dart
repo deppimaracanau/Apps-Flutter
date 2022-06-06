@@ -1,20 +1,21 @@
-import 'package:firebase_auth/firebase_auth.dart' hide User;
-import 'package:flutter/foundation.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
 import 'package:udemyloja/common/models/user.dart';
 
 class UserManager {
+
   final FirebaseAuth auth = FirebaseAuth.instance;
 
-  void signIn(User user) async {
+  Future<void> signIn(Usuario usuario) async {
     try {
-      final AuthCredential result = await auth.signInWithEmailAndPassword(
-          email: user.email, password: user.senha) as AuthCredential;
-    } on PlatformException catch(e){
-      if (kDebugMode) {
-        print(e);
-      }
+      final UserCredential result = await auth.signInWithEmailAndPassword(
+          email: usuario.email, password: usuario.senha);
+
+      print(result.user?.uid);
+    } on PlatformException catch (e){
+      print(e);
     }
   }
+
 }
 

@@ -1,12 +1,8 @@
-import 'package:firebase_auth/firebase_auth.dart';
+class Usuario {
 
+  Usuario({required this.email, required this.senha});
 
-class User {
-  final String email;
-  final String senha;
-
-  User(this.email, this.senha);
-
-
+  String email;
+  String senha;
 
 }
