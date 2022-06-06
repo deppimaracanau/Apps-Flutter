@@ -5,15 +5,12 @@ import 'package:udemyloja/helpers/validators.dart';
 import 'package:udemyloja/common/models/user.dart';
 import 'package:udemyloja/common/models/user_manager.dart';
 
-
-
 class LoginScreen extends StatelessWidget {
-
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController senhaController = TextEditingController();
 
-   LoginScreen({Key? key}) : super(key: key);
+  LoginScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +44,9 @@ class LoginScreen extends StatelessWidget {
                     return null;
                   },
                 ),
-                const SizedBox(height: 10,),
+                const SizedBox(
+                  height: 10,
+                ),
                 TextFormField(
                   controller: senhaController,
                   decoration: const InputDecoration(
@@ -62,7 +61,7 @@ class LoginScreen extends StatelessWidget {
                     if (senha!.isEmpty || senha.length < 6) {
                       return 'Senha invalida';
                     } else {
-                          () {
+                      () {
                         return null;
                       };
                     }
@@ -81,32 +80,35 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                const SizedBox(height: 16,),
+                const SizedBox(
+                  height: 16,
+                ),
                 SizedBox(
                   height: 44,
                   child: ElevatedButton(
-                    onPressed: (){
-                      if(formKey.currentState!.validate()){
-                        print(emailController.text);
+                    onPressed: () {
+                      if (formKey.currentState!.validate()) {
+                       context.read<UserManager>().signIn(
+                           User(
+                             email: emailController.text,
+                             senha: senhaController.text,
+                           ),
+                       );
                       }
                     },
                     // color: Theme.of(context).primaryColor,
                     // textColor: Colors.white,
                     child: const Text(
                       'Entrar',
-                      style: TextStyle(
-                          fontSize: 18
-                      ),
+                      style: TextStyle(fontSize: 18),
                     ),
                   ),
                 )
               ],
             ),
-            ),
           ),
         ),
+      ),
     );
   }
-
 }
-

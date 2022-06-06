@@ -8,8 +8,8 @@ class UserManager {
 
   void signIn(User user) async {
     try {
-      final AuthCredential result = (await auth.signInWithEmailAndPassword(
-          email: user.email, password: user.senha)) as AuthCredential;
+      final AuthCredential result = await auth.signInWithEmailAndPassword(
+          email: user.email, password: user.senha) as AuthCredential;
     } on PlatformException catch(e){
       if (kDebugMode) {
         print(e);
@@ -18,19 +18,3 @@ class UserManager {
   }
 }
 
-// class UseManager {
-//   final FirebaseAuth auth = FirebaseAuth.instance;
-//
-//
-//
-//   Future<void> signIn( User user) async {
-//     try {
-//       final UserCredential result = await auth.signInWithEmailAndPassword(
-//           email: user.email, password: user.senha);
-//     } on PlatformException catch (e) {
-//       if (kDebugMode) {
-//         print(e);
-//       }
-//     }
-//   }
-// }
