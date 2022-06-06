@@ -36,7 +36,7 @@ class ProximoCompromisso extends StatelessWidget{
           Row(
             children: [
               //---------------------------
-              //-----Icon card
+              //-----card Icon
               //---------------------------
               /// A widget that expands its child to fill the available space.
               Expanded(
@@ -73,12 +73,11 @@ class ProximoCompromisso extends StatelessWidget{
                 ),
               ),
               //------------------------------
-              //-----Informação da agenda
+              //-----Informação da agenda Column Expanded
               //------------------------------
               /// A column with a text widget and a row with three widgets.
-              Expanded(
-                flex: 10,
-                child: Column(
+
+                Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(height: 10),
@@ -116,7 +115,7 @@ class ProximoCompromisso extends StatelessWidget{
                     const SizedBox(height: 10),
                   ],
                 ),
-              )
+
             ],
           ),
           //-----------------------------

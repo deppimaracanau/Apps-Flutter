@@ -4,6 +4,8 @@ import 'package:clinica/models/especialidade.dart';
 import 'package:clinica/models/paciente.dart';
 import 'package:clinica/ui/home/widgets/homewidiget.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
+
 
 /// It's a list view with a fixed height, with a list of specialties, a list of
 /// doctors, a text with a date and a grid view with a fixed height
@@ -15,9 +17,11 @@ class HomePage extends StatefulWidget {
   HomePageState createState() => HomePageState();
 }
 
+
 class HomePageState extends State<HomePage> {
   bool abrirAgenda = false;
   bool mostrarDetalhesAgenda = false;
+
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +29,7 @@ class HomePageState extends State<HomePage> {
     const duracao = Duration(milliseconds: 400);
     final altura = (size.width * .75).clamp(310.0, 340.0);
     final proximoCompromisso = Agenda.proximoCompromisso;
+
 
     /// It's creating a widget with a fixed height, with a text with a date,
     /// a text with a time, a text with a doctor's name, a text with a specialty
@@ -156,6 +161,8 @@ class HomePageState extends State<HomePage> {
   ///
   /// Args:
   ///   animationDuration (Duration): The duration of the animation.
+
+
   void _onTapExpandButton(Duration animationDuration) {
     if (abrirAgenda) {
       setState(() {
@@ -200,6 +207,7 @@ class Home extends StatelessWidget {
 
     /// Creating a list view with a fixed height.
     return ListView(
+
       padding: espacamento,
       physics: const BouncingScrollPhysics(),
       children: <Widget>[
@@ -270,7 +278,7 @@ class Home extends StatelessWidget {
               text: 'Ultimos check up',
               children: [
                 TextSpan(
-                  text: '{$DateTime.now()}',
+                  text: '  ${getCurrentDate()}',
                   style: TextStyle(
                     color: Colors.grey[400],
                     fontWeight: FontWeight.w700,
@@ -307,4 +315,10 @@ class Home extends StatelessWidget {
       ],
     );
   }
+
+  getCurrentDate() {
+    return DateFormat('dd-MM-yyyy').format(DateTime.now());
+  }
 }
+
+

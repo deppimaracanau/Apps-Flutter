@@ -8,7 +8,7 @@
   "glyphs": [
     {
       "uid": "e8ac320045a6dee3013bb17e69b503b5",
-      "css": "stethoscope",
+      "css": "Estetoscopios",
       "code": 59407,
       "src": "custom_icons",
       "selected": true,
@@ -17,12 +17,12 @@
         "width": 1000
       },
       "search": [
-        "cardiologist-stethoscope"
+        "Estetoscopios"
       ]
     },
     {
       "uid": "d6e8fd25fddfdf234b102fd003a68deb",
-      "css": "eye_o",
+      "css": "Olhos",
       "code": 59406,
       "src": "custom_icons",
       "selected": true,
@@ -31,12 +31,12 @@
         "width": 1000
       },
       "search": [
-        "eye-test-(1)"
+        "Olhos"
       ]
     },
     {
       "uid": "fdb8ff49d5d936bef6d6f78b5a2950f7",
-      "css": "eye",
+      "css": "Olhos2",
       "code": 59405,
       "src": "custom_icons",
       "selected": true,
@@ -45,12 +45,12 @@
         "width": 1000
       },
       "search": [
-        "eye-test"
+        "Olhos2"
       ]
     },
     {
       "uid": "5a6c1446ade482be678e168c0f9949c6",
-      "css": "runny_nose",
+      "css": "Nariz",
       "code": 59404,
       "src": "custom_icons",
       "selected": true,
@@ -59,12 +59,12 @@
         "width": 1000
       },
       "search": [
-        "runny-nose"
+        "Nariz"
       ]
     },
     {
       "uid": "a27b2007e5596934a89e197822ac76be",
-      "css": "skin_o",
+      "css": "Pele",
       "code": 59403,
       "src": "custom_icons",
       "selected": true,
@@ -73,12 +73,12 @@
         "width": 1000
       },
       "search": [
-        "hair-(1)"
+        "pele"
       ]
     },
     {
       "uid": "d0edb0018a6fa3d0d8e784c63d538e46",
-      "css": "runny_nose_o",
+      "css": "Nariz2",
       "code": 59401,
       "src": "custom_icons",
       "selected": true,
@@ -87,12 +87,12 @@
         "width": 1000
       },
       "search": [
-        "runny-nose-(1)"
+        "Nariz2"
       ]
     },
     {
       "uid": "f114f854dd4b5fc20fda071d95b24ac3",
-      "css": "prostate",
+      "css": "Prostata",
       "code": 59400,
       "src": "custom_icons",
       "selected": true,
@@ -101,12 +101,12 @@
         "width": 1000
       },
       "search": [
-        "kidneys-(1)"
+        "Prostata)"
       ]
     },
     {
       "uid": "47f0f3a5c13732e9f22fe5913d2fda9d",
-      "css": "prostate_o",
+      "css": "Prostata2",
       "code": 59399,
       "src": "custom_icons",
       "selected": true,
@@ -115,12 +115,12 @@
         "width": 1000
       },
       "search": [
-        "kidneys"
+        "Prostata2"
       ]
     },
     {
       "uid": "712b0f8e9bcf7a5954ad39da5dad4f58",
-      "css": "pediatrician",
+      "css": "pediatra",
       "code": 59398,
       "src": "custom_icons",
       "selected": true,
@@ -129,12 +129,12 @@
         "width": 1000
       },
       "search": [
-        "pediatrician-(1)"
+        "pediatra"
       ]
     },
     {
       "uid": "1b3a537f61dfcbe7b9c500dab7b1993c",
-      "css": "surgeon",
+      "css": "Oftamologista",
       "code": 59397,
       "src": "custom_icons",
       "selected": true,
@@ -143,12 +143,12 @@
         "width": 1000
       },
       "search": [
-        "surgeon-(1)"
+        "Oftamologista"
       ]
     },
     {
       "uid": "b85d9f69ad1877d5e123c39686b13097",
-      "css": "surgeon_o",
+      "css": "Oftamologista2",
       "code": 59396,
       "src": "custom_icons",
       "selected": true,
@@ -157,12 +157,12 @@
         "width": 1000
       },
       "search": [
-        "surgeon"
+        "Oftamologista2"
       ]
     },
     {
       "uid": "488948be19ebb5a2d5f80c7431ad5acc",
-      "css": "dentist",
+      "css": "Dentista",
       "code": 59395,
       "src": "custom_icons",
       "selected": true,
@@ -171,12 +171,12 @@
         "width": 1000
       },
       "search": [
-        "dentist"
+        "Dentista"
       ]
     },
     {
       "uid": "90427354b84a986c21f9ec8d76aea518",
-      "css": "pediatrician_o",
+      "css": "Pediatra",
       "code": 59394,
       "src": "custom_icons",
       "selected": true,
@@ -185,12 +185,12 @@
         "width": 1000
       },
       "search": [
-        "pediatrician"
+        "Pediatra"
       ]
     },
     {
       "uid": "72a11925f9c11158b10ec610bd93dd11",
-      "css": "kidneys",
+      "css": "Pediatra2",
       "code": 59392,
       "src": "custom_icons",
       "selected": true,
@@ -199,12 +199,12 @@
         "width": 1000
       },
       "search": [
-        "kidneys-(2)"
+        "Pediatra2"
       ]
     },
     {
       "uid": "b45525a6461ee4086ea68080a3a8ebb0",
-      "css": "kidneys_o",
+      "css": "Pediatra3",
       "code": 59402,
       "src": "custom_icons",
       "selected": true,
@@ -213,12 +213,12 @@
         "width": 1000
       },
       "search": [
-        "kidneys-(3)"
+        "Pediatra3"
       ]
     },
     {
       "uid": "9fc8129a0c1d776164be5a69bd4637ef",
-      "css": "skin",
+      "css": "Cabelo",
       "code": 59408,
       "src": "custom_icons",
       "selected": true,
@@ -227,7 +227,7 @@
         "width": 1000
       },
       "search": [
-        "hair"
+        "Cabelo"
       ]
     }
   ]

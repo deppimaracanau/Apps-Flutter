@@ -26,8 +26,8 @@ class Busca extends StatelessWidget {
       child: Row(
         children: [
           /// Creating a textfield with a search icon inside.
-          Expanded(
-            child: SizedBox(
+//removiso o Expanded aqui
+            SizedBox(
               height: height,
               child: TextField(
                 keyboardType: TextInputType.text,
@@ -52,7 +52,7 @@ class Busca extends StatelessWidget {
                 ),
               ),
             ),
-          ),
+
           const SizedBox(
             width: 10,
           ),

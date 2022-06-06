@@ -100,7 +100,7 @@ class Medico {
       nome: 'Iris Bohorquez',
       especialidade: Especialidade.cOrtopedista,
       comentarios: 203,
-      fotoPng: 'https://pngimg.com/uploads/Medico/Medico_PNG16043.png',
+      fotoPng: 'https://images.pexels.com/photos/8942128/pexels-photo-8942128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       endereco: Endereco.brownwood,
       xpAnos: 2009,
       curtidas: 359,
@@ -112,7 +112,7 @@ class Medico {
       especialidade: Especialidade.cUrologista,
       comentarios: 193,
       fotoPng:
-      'http://www.pngall.com/wp-content/uploads/2018/05/Medico-Free-Download-PNG.png',
+      'https://images.pexels.com/photos/6234633/pexels-photo-6234633.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       endereco: Endereco.brownwood,
       xpAnos: 2000,
       curtidas: 301,
@@ -125,7 +125,7 @@ class Medico {
       comentarios: 210,
       xpAnos: 2012,
       fotoPng:
-      'http://www.pngall.com/wp-content/uploads/2018/05/Medico.png',
+      'https://br.freepik.com/fotos-gratis/contrato-de-cabelos-castanhos-corporativa-medico-sofisticado_1078106.htm#query=medicos&position=2&from_view=search',
       endereco: Endereco.brownwood,
       curtidas: 324,
       avaliacao: 4.6,
@@ -136,7 +136,7 @@ class Medico {
       especialidade: Especialidade.cEndocrinologista,
       comentarios: 173,
       fotoPng:
-      'http://www.pngall.com/wp-content/uploads/2018/05/Medico-PNG-File-Download-Free.png',
+      'https://images.pexels.com/photos/6762862/pexels-photo-6762862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       endereco: Endereco.brownwood,
       xpAnos: 2010,
       curtidas: 239,

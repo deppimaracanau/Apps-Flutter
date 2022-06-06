@@ -4,7 +4,6 @@ import 'package:clinica/ui/home/widgets/homewidiget.dart';
 import 'package:flutter/material.dart';
 import 'package:clinica/cores/cordoapp.dart';
 
-import '../../../models/especialidade.dart';
 
 /// It creates a stack with two widgets
 class CardMedico extends StatelessWidget {
