@@ -93,13 +93,15 @@ class _EstagioappState extends State<Estagioapp> {
       /// The above code is creating a list of cards that are being populated by
       /// the data from the link.dart file.
       decoration: const BoxDecoration(
-        gradient: LinearGradient(
+        gradient: RadialGradient(
           colors: [
-            Color.fromARGB(145, 131, 222, 1),
-            Color.fromARGB(220, 220, 220, 1),
+            Colors.green,
+            Colors.red,
+
           ],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
+            tileMode: TileMode.mirror,
+          // begin: Alignment.topCenter,
+          // end: Alignment.bottomCenter,
         ),
       ),
 

@@ -95,6 +95,7 @@ class Medico {
     avaliacao: 4.5,
   );
 
+  /// Creating a list of doctors.
   static const listaMedico = [
     Medico(
       nome: 'Iris Bohorquez',
